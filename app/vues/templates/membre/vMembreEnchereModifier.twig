@@ -1,0 +1,105 @@
+
+    <!-- =================FICHE========================================================= -->
+
+<div class="fiche-main">
+    <div class="fiche-Flex">
+        <div class="fiche-foto">
+            <div class="fiche-main-photo">
+                <picture>
+                    <img src="assets/jpeg/timbres/{{ timbre_image }}" alt="photo fiche">
+                </picture>
+            </div>
+        </div>
+
+
+        
+        
+    <form class="form-form" enctype="multipart/form-data" action="modifEnchere" method="post">
+        <div class="fiche-detail">
+            <div class="fiche-detail-info-haut">
+                <h2 class="fiche-nom">Titre: {{timbre_nom}}</h2>
+                <p class="fiche-lot">Voiture: <span> {{timbre_id}}</span></p>
+
+                {# nom #}
+                    <h3>Машина / Мотор</h3>
+                        <label class="form-courriel" for="tNom"> 
+                            <input id="tNom" class="form-courriel" type="text" name="timbre_nom" placeholder="nom" value="{{timbre_nom}}">
+                        <span class="errMsg">&nbsp;{{ erreurs.timbre_nom  }}</span>
+                    </label>
+
+                {# prix #}
+                    <h3>Цена</h3>
+                    <label class="form-courriel" for="tPrix">
+                        <input id="tPrix" class="form-courriel" type="text" name="timbre_prix" placeholder="Цена" value="{{timbre_prix}}">
+                        <span>&nbsp;{{ erreurs.timbre_prix }}</span>
+                    </label>
+
+                    {# Пробег #}
+                    <h3>Пробег: </h3>
+                        <label class="form-courriel" for="tKm">
+                        <input id="tKm" class="form-courriel" type="text" name="timbre_km" value="{{timbre_km}}">
+                        <span>&nbsp;{{ erreurs.timbre_km }}</span>
+                    </label>
+
+
+                    {# <div class="fiche-description"> #}
+                    <p> Колёса:</p>
+                    <select class="pneu" name="timbre_categorie">
+                        {% for categorie in categories %}
+                        <option value="{{categorie.categorie_id}}">{{categorie.categorie_nom}}</option>
+                        {% endfor %}
+                    </select>
+                    <span>&nbsp;{{ erreurs.timbre_categorie }}</span>
+
+
+                    <p>Багажник / Кондиционер: </p>
+                        <select class="coffre" name="timbre_pays"> 
+                        {% for pay in pays %}
+                            <option value=" {{pay.pays_id}} "> {{pay.pays_nom}}</option>
+                        {% endfor %}
+                    </select>
+                    <span>&nbsp;{{ erreurs.timbre_pays }}</span>
+
+
+
+                    {# Год #}
+                    <div>
+                        <h3>Год</h3>
+                        <label class="form-courriel" for="tAnee">
+
+                            <select class="pneu" name="timbre_categorie" name="timbre_anee" class="form-courriel" id="tAnee">
+                                <option value="2014">2014</option>
+                                <option value="2015" selected >2015</option>
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                            </select>
+
+                            {# <input id="tAnee" class="form-courriel" type="text" name="timbre_anee" placeholder="Год" value="201"> #}
+                            <span>&nbsp;{{ erreurs.timbre_anee }}</span>
+                        </label>
+                    </div>
+
+
+                    <p> Линк: </p>
+                    <textarea name="timbre_description" class="form-courriel" rows="5" cols="65" >{{timbre_description}}</textarea>
+                    <span>&nbsp;{{ erreurs.timbre_description }}</span>
+
+
+                    {# Фото #}  
+                    <div>
+                        <h3>Фото</h3>
+                        <label class="photoCar" for="tFile">
+                            <input id="tFile" class="form-courriel" type="file" visbility="hidden" name="userfile">
+                        </label>
+                    </div>
+
+                {# </div> #}
+            </div>
+
+            <button class="form-sumettre">Soumettre</button>
+        </div>
+    </form>  
+      
+    </div>
+</div>

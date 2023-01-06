@@ -1,0 +1,22 @@
+/* SETTINGS - Variables globales */
+
+@import "styles/1-Settings/colors.css";
+@import "styles/1-Settings/fonts.css";
+
+/* GENERIC - Styles de base */
+
+@import "styles/2-Generic/reset.css";
+
+/* ELEMENTS - Éléments HTML */
+
+@import "styles/3-Elements/form.css";
+@import "styles/3-Elements/typography.css";
+
+/* COMPONENTS */
+
+@import "styles/4-Components/body.css";
+@import "styles/4-Components/btn.css";
+@import "styles/4-Components/footer.css";
+@import "styles/4-Components/header.css";
+@import "styles/4-Components/menu.css";
+@import "styles/4-Components/media.css";

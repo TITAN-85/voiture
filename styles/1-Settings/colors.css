@@ -1,0 +1,94 @@
+/*------------------------------------*\
+  colors / settings
+\*------------------------------------*/
+
+:root {
+  /* --color-primary: #17a477;
+  --color-primary-variation:  #17a477;
+  --color-primary-second-variation: #c2e982;
+  --color-secondary: #f8efd4;
+  --color-secondary-variation:#12455a;
+  --color-palette-first: #ffffff;
+  --color-palette-second:  #121b08;
+  --color-palette-second-var:#F1EFE5;
+  --color-palette-third: #ADB5C5;
+  --color-dark: #201D1F;
+  --color-white: #ffffff; */
+}
+
+:root {
+  /* --color-primary:  #661502;
+  --color-primary-variation:  #fffbf4;
+  --color-primary-second-variation:  #915e00;
+  --color-secondary: #dcf1f6;
+  --color-secondary-variation: #1e4475  ;
+  --color-palette-first: #ADB5C5;
+  --color-palette-second:  #598ed3;
+  --color-palette-second-var: #dcf1f6;
+  --color-palette-third: #6cacfe ;
+  --color-dark: #201D1F;
+  --color-white: #ffffff; */
+}
+
+:root {
+  /* --color-primary:  #4d92a4;
+  --color-primary-variation: #dcf1f6;
+  --color-primary-second-variation:#cecec2;
+  --color-secondary : #7fa59b;
+  --color-secondary-variation: #6cacfe ;
+  --color-palette-first: #cecec2;
+  --color-palette-second: #ADB5C5;
+  --color-palette-second-var: #efeee3 ;
+  --color-palette-third:#f9f9f9 ;
+  --color-dark: #201D1F;
+  --color-white: #ffffff; */
+}
+
+:root {
+  /* --color-primary:  #0f5d20;
+  --color-primary-variation:   #0f5d20;
+  --color-primary-second-variation: #6cacfe;
+  --color-secondary:  #0c8f15;
+  --color-secondary-variation: #f6f6f5;
+  --color-palette-first:  #b3b73f;
+  --color-palette-second: #ADB5C5;
+  --color-palette-second-var: #dcf1f6;
+  --color-palette-third: #d8f5f6;
+  --color-dark: #201D1F;
+  --color-white: #ffffff; */
+}
+
+/* Bon version pas de contrast */
+:root {
+  /* --color-primary: #208e9f;
+  --color-primary-variation: #6cacfe;
+  --color-primary-second-variation:#2985c1;
+  --color-secondary: #7eb78c;
+  --color-secondary-variation:#27853e  ;
+  --color-palette-first: #dfce9e;
+  --color-palette-second: #464a50; 
+  --color-palette-plus: #bbbec4; 
+  --color-palette-second-var: #dcf1f6;
+  --color-palette-third: #dfeaf5;
+  --color-dark: #201D1F;
+  --color-white: #ffffff; */
+}
+
+/* Bon version avec contrast - Axe valide! */
+:root {
+  --color-primary: #0a5e6b;
+  --color-primary-variation: #2075e4;
+  --color-primary-second-variation:#0d6199;
+  --color-secondary: #7eb78c;
+  --color-secondary-variation:#27853e  ;
+  --color-palette-first: #dfce9e;
+  --color-palette-second: #464a50; 
+  --color-palette-plus: #bbbec4; 
+  --color-palette-second-var: #c1e4ec;
+  --color-palette-third: #b2c8df;
+  --color-dark: #201D1F;
+  --color-white: #ffffff;
+}
+
+
+

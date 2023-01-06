@@ -1,0 +1,264 @@
+/*------------------------------------*\
+  form / elements
+\*------------------------------------*/
+
+/* ================================= FORM BAS ===================================== */
+.form-courriel-section {
+	margin-bottom: var(--font-size-x-large);
+	background-color: var(--color-palette-second-var);
+	border-bottom: solid 4px var(--color-secondary);
+}
+.form-courriel {
+	font-size: var(--line-height-normal);
+	padding: 10px;
+	border-radius: 4px;
+	border: none;
+}
+
+.coffre, .pneu {
+	padding: 10px;
+	border: none;
+}
+#tFile {
+	padding: 20px;
+	border: none;
+	background-color: var(--color-primary);
+	overflow: hidden;
+}
+#tFile:hover {
+	background-color: var(--color-primary-second-variation);
+}
+
+.courriel {
+	border: 2px solid var(--color-palette-second);
+	padding-left: 20px;
+	width: 100%;
+}
+
+.form-form {
+	margin: 20px;
+}
+
+.form-inputs input{
+	padding: 15px;
+	padding-right: 410px;
+	border: none;
+	border-bottom: solid 1px var(--color-primary-second-variation);
+	background-color: var(--color-palette-second-var);
+}
+
+.form-main {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.courriel-hover,
+.courriel-titre,
+.courriel-nom,
+.courriel-prenom {
+	display: none;
+}
+
+.form-sumettre {
+	display: flex;
+	justify-content: center;
+	text-transform: uppercase;
+	font-size: 14px;
+	letter-spacing: 1px;
+	width: 100%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border: none;
+	border-radius: 2px;
+}
+
+.form-sumettre {
+	background-color: var(--color-primary);
+	color: var(--color-white);
+	font-weight: bold;
+}
+
+.form-main h3 {
+	font-weight: 500;
+}
+.form-titre-haut,
+.form-titre-bas {
+	padding: 20px;
+}
+.form-sumettre:hover {
+	background-color: var(--color-primary-second-variation);
+}
+.form-titre-haut {
+	color: var(--color-palette-second);
+
+}
+/* ================================= FORM Catalog ===================================== */
+
+.formGroup {
+    margin-bottom: 1rem;
+    /* font-size: 14px; */
+}
+
+div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    /* top: 5em; */
+    z-index: 1;
+}
+
+.filterCartes {
+    position: sticky;
+    top: 3rem;
+    padding: 1.25rem;
+    width: 278px;
+    color: rgba(0, 0, 0, 0.87);
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px #00000017;
+}
+
+.filterCartes  {
+	background-color: var(--color-palette-second-var);
+}
+
+.formGroup span, .formGroup label  {
+	color: var(--color-dark);
+
+}
+.formGroup label {
+	font-family: var(--font-secondary);
+	color: var(--color-palette-second);
+	text-transform: uppercase;
+}
+.formGroup {
+	background-color: var(--color-white);
+	padding: 10px;
+}
+
+.filterCartes  h2 {
+	background-color: var(--color-white);
+}
+
+.sidebar {
+	padding: 30px 40px 43px 0px;
+}
+.sidebar h2 {
+	background-color: var(--color-primary);
+	padding: 0;
+	padding: 10px 0px 10px 33px;
+	border-radius: 3px 3px 0px 0px;
+}
+.selectForm, 
+.prixMinInput,
+.prixMaxInput {
+    width: 100%;
+    padding: var(--font-size-xx-small);
+    font-size: var(--font-size-small);
+    color: var(--color-primary-second-variation);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-palette-plus);
+    border-radius: 2px;
+    margin-top: 10px;
+}
+.prixMinInput,
+.prixMaxInput {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.filterPrix {
+	width: 236px;
+}
+
+.btnRechercher {
+	color: var(--color-white);
+	font-weight: 700;
+	font-size: var(--font-size-small);
+	width: 100%;
+	border-radius: 4px;
+	border: none;
+	padding: 20px;
+	background-color: var(--color-primary);
+}
+
+.formSide .formGroup:last-child {
+	margin-bottom: 0;
+}
+
+/* ================================= FORM HAUT ===================================== */
+
+input {
+    outline: none;
+}
+
+header .input-text,
+header .input-input {
+	font-size: var(--line-height-normal);
+	margin-bottom: 25px;
+	margin-top: 25px;
+	border-radius: 3px;
+}
+
+.input-bar {
+	display: flex;
+}
+
+.input-input {
+	border: 2px solid var(--color-palette-second);
+	border-right: 0 ;
+	padding-left: 20px;
+	width: 100%;
+}
+
+.input-footer input{
+	padding: 10px;
+}
+
+/* Text dans btn chercher */
+.input-text { 
+	background-color: var(--color-palette-second);
+	border: 2px solid var(--color-palette-second);
+	color: var(--color-white);
+	font-weight: 700;
+	display: flex;
+	cursor: pointer;
+}
+
+.input-text p {
+	color: var(--color-secondary);
+	font-size: var(--font-size-x-small);
+	font-weight: var(--font-weight-heavy);
+	text-transform: uppercase;
+}	
+
+.input-text:hover { 
+	background-color: var(--color-primary-second-variation);
+	transition: 0.2s;
+}
+
+
+main>.ajouter-utilisateur {
+	padding: 50px;
+	background-color: white;
+}
+
+.ajouter-utilisateur  {
+	display: flex;
+	flex-direction: column;
+	padding: 40px;
+}
+.ajouter-utilisateur div {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 20px;
+	background-color: white;
+}
+
+.hide {
+	display: none;
+}
+.ajouter-utilisateur>div input {
+	padding: 10px;
+}

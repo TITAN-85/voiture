@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Site web d'enchères Stampee">
+  <meta name="Author" content="Alexandru Candu 2295298  Gr:21647">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ titre }}</title>
+  <link rel="stylesheet" href="main.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600;700&family=Monserrat:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  {# <link rel="stylesheet" type="text/css" href="css/frontend.css?v=1.2"> #}
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap" rel="stylesheet">
+  
+</head>
+
+<body>
+  <header class="header header-bg">
+
+          <div class="header-haut">
+            <div>
+                <ul class="header-connect">
+                    
+                    {% if oUtilConn == false %}
+                    <li class="conexion"><a href="membre"> Se connecter |</a></li>
+                    <li class="conexion"><a href="ajouterUtilisateur">| Nouveau soumissionnaire</a></li>
+                    {# (isset($_SESSION['oUtilConn']) #}
+                    {% endif %}
+                    {% if oUtilConn == true %}
+                        <li class="conexion"><a href="membre?entite=timbre&action=f"> Mon Profil |</a></li>
+                        <li class="conexion"><a href="membre?entite=utilisateur&action=d">| Déconnecter</a></li>
+                    {% endif %}
+                    <li class="conexion">{{ oUtilConn.utilisateur_prenom }} {{ oUtilConn.utilisateur_nom }}</li> 
+                </ul>
+            </div>
+            <div>
+                <ul class="header-connect">
+                    {% if oUtilConn == false %}
+                    <li class="conexion"><a href="admin">Admin button |</a></li>
+                    <li class="conexion-droite"><a href="catalogue"></a><span>VENDRE</span></li>
+                    {% endif %}    
+                    
+                    {% if oUtilConn == true %}
+                    <li class="conexion-droite"><a href="membre?entite=timbre&action=fo"></a><span>VENDRE</span></li>
+                    {% endif %}
+                    
+                    <li class="conexion-droite"><a href="catalogue"></a><span>JOIGNEZ-VOUS À NOTRE LISTE
+                            D'ENVOI</span></li>
+                    <li class="langue">
+                        <a href="catalogue">FRANCAIS</a>
+                        <ul class="langue-dropdown">
+                            <li><a href="catalogue"><span>Anglais</span></a></li>
+                            <li><a href="catalogue"><span>Romaine</span></a></li>
+                            <li><a href="catalogue"><span>Zingbabua</span></a></li>
+                            <li><a href="catalogue"><span>Chinoise</span></a></li>
+                            <li><a href="catalogue"><span>Polonez</span></a></li>
+                            <li><a href="catalogue"><span>Bulgarian</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- HEADER BAS-->
+        <div class="contenu-trouver-principal">
+            <div class="contenu-trouver">
+                <div>
+                    <a href="index.html"><img class="header-logo" src="assets/png/logo.png" alt="logo Stampee"></a>
+                </div>
+                <form class="input-bar" method="POST" action="rechercher" >
+                    <div class="input-bar">
+                        <input class="input-input" type="text" value="" name="enchere_recherchee" placeholder="Trouvez une enchère">
+                        {# <input class="input-input" type="text" name="trouve-postal" placeholder="Code Postale"> #}
+                        {# <input class="input-input" type="text" name="trouve-distance" placeholder="50 Km"> #}
+                        <input class="input-text" type="submit" value="Rechercher">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+  </header>
+
+
+  <!-- checkbox BTN MENU FERMER -->
+  <input type="checkbox">
+
+
+<!-- NAV -->
+    <nav class="menu">
+        <!-- menu principal -->
+        <ul class="menu-list">
+            <li class="menu-principal menu-Accueil"><a href="accueil">Accueil</a></li>
+            <li class="menu-principal menu-Accueil"><a href="catalogue">Catalogue Subaru</a></li>
+            <li class="menu-principal "><a href="membre?entite=timbre&action=f">Mon Profil</a></li>
+            <li class="menu-principal"><a href="membre?entite=timbre&action=f">Посмотреть все машины</a></li>
+            <li class="menu-principal"><a href="membre?entite=timbre&action=fo">Добавить все машину тут</a></li>
+            <li class="menu-principal"><a href="catalogue">contactez-nous</a></li>
+        </ul>
+    </nav>
+
+  <main>
+
+  {{ include(templateMain) }}
+
+  </main>
+
+
+
+  <!-- FOOTER ================================================-->
+  <!-- FOOTE-HAUT -->
+  <footer class="footer">
+        <div>
+            <section>
+                <h2>Accès rapides</h2>
+                <ul class="footer-menu">
+                    <li><a href="catalogue.html">Enchère en cours</a></li>
+                    <li><a href="catalogue.html">La philatélie, c'est la vie</a></li>
+                    <li><a href="catalogue.html">Biographie du Lord</a></li>
+                    <li><a href="catalogue.html">Historique familial</a>
+                    </li>
+                </ul>
+                <ul class="footer-menu">
+                    <li><a href="catalogue.html">Se connecter</a></li>
+                    <li><a href="catalogue.html">Devenir membre</a></li>
+                </ul>
+            </section>
+
+
+            <section class="input-footer">
+                <h2>Abonnez-vous à notre infolettre !</h2>
+                <p>Prenez connaissance en avance de toutes nos
+                    nouveautés et profiter d'offres exceptionnels !</p>
+                <form action="#" method="POST">
+                    <div class="input-bar">
+                        <div class="input-text">
+                            <input type="text" name="input-bar" placeholder="Entrez votre courriel">
+                            <input class="input-text" type="submit" value="S'abonner">
+                        </div>
+                    </div>
+                </form>
+                <div class="footer-icons">
+                    <a href="catalogue.html"><i class="fab fa-brands fa-facebook-square fa-lg icone-social"></i></a>
+                    <a href="catalogue.html"><i class="fab fa-brands fa-twitter-square fa-lg icone-social"></i></a>
+                    <a href="catalogue.html"><i class="fab fa-instagram fa-lg icone-social"></i></a>
+                </div>
+            </section>
+
+
+            <section class="footer-menu-droite-main">
+                <h2>Contact & support</h2>
+                <ul class="footer-menu-droite">
+                    <li><a href="catalogue.html">Termes et conditions</a></li>
+                    <li><a href="catalogue.html">Aide</a></li>
+                    <li><a href="catalogue.html">Contactez le webmestre</a></li>
+                    <li><a href="catalogue.html">Contactez-nous</a></li>
+                </ul>
+                <ul class="footer-menu-droite">
+                    <li>1748 Princes St, Richmond</li>
+                    <li>TW9 1ED, Royaume-Uni</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- FOOTE-BAS -->
+        <div class="footer-footer">
+            <div>
+                <div><img width="150" class="footer-logo" src="assets/png/logo.png" alt="logo Stampee"></div>
+                <div>
+                    <i class="fa fa-lg fa-phone"></i>
+                    <span><a class="footer-telephone" href="">844-775-4774</a></span>
+                </div>
+            </div>
+            <div>
+                <ul class="politique">
+                    <li><span>L.S. Enchères © 2020 |</span></li>
+                    <li><span> Tous droits réservés</span></li>
+                </ul>
+                <ul class="politique politique-bas">
+                    <li><a href="catalogue.html" aria-label="Plan du site">Plan du site |</a></li>
+                    <li><a href="catalogue.html" aria-label="Cookies Policy">Cookies Politique |</a></li>
+                    <li><a href="catalogue.html" aria-label="Conditions du vendeur">Conditions du vendeur |</a></li>
+                    <li><a href="catalogue.html" aria-label="Conditions de l'enchérisseur">Conditions de l'enchérisseur
+                            |</a></li>
+                    <li><a href="catalogue.html" aria-label="Conditions d'utilisation">Conditions d'utilisation</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

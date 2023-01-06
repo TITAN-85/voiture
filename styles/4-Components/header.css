@@ -1,0 +1,136 @@
+/*------------------------------------*\
+  header / components
+\*------------------------------------*/
+
+/* .header {
+	display: none;
+} */
+.contenu-trouver,
+.header-haut,
+.header-connect {
+	display: flex;
+}
+
+
+.contenu-trouver {
+	justify-content: space-between;
+}
+
+.header-logo {
+	display: block;
+	padding: 20px 0px 10px 0px;
+	width: 140px;
+}
+.contenu-trouver a {
+	margin: 0;
+	padding: 0;
+}
+
+.contenu-trouver-principal {
+	background-color: var(--color-primary);
+}
+.header-haut {
+	justify-content: space-between;
+	padding: 10px 0px 10px 0px;
+}
+.header-bg {
+	background-color: var(--color-palette-second-var);
+}
+
+.header-connect a {
+	padding: 0;
+	margin: 0;
+	font-size: var(--font-size-small);
+	color: var(--color-palette-second);
+}
+
+.langue-dropdown {
+	display: none;
+	position: absolute;
+
+}
+
+.langue:hover .langue-dropdown {
+	display: block;
+}
+
+.langue>a {
+	font-size: var(--font-size-small);
+	border-radius: 3px;
+	padding: 5px 0px 5px 16px;
+	color: var(--color-secondary-variation);
+}
+
+
+.langue {
+	display: inline-block;
+	position: relative;
+	justify-content: center;
+	justify-items: center;
+	left: 0;
+}
+.langue ul{
+	border: 2px #ddd solid;
+	border-top: none;
+	box-shadow: 0 5px 5px #00000040;
+    z-index: 5;
+    background-color: #fff;
+    padding: 0;
+}
+
+.header-connect span{
+	font-size: var(--font-size-small);
+	color: var(--color-palette-second);
+	font-size: 12px;
+}
+
+.langue-dropdown li{
+    display: block;
+    border-top: 1px solid #ddd;
+    text-align: left;
+	padding: 10px;
+}
+
+.conexion-droite {
+	margin-right: 20px;
+}
+
+.langue-dropdown span {
+	font-size: 14px;
+} 
+
+.header-haut, .contenu-trouver {
+	max-width: 1300px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+.photo_banner {
+    width: 100%;
+    position: relative;
+    height: clamp(200px, 50vh, 400px);
+    overflow: hidden;
+	filter: opacity(80%);
+    /* background-color: var(--color-primary); */
+}
+
+
+
+.langue-dropdown a {
+	padding: 10px;
+}
+
+/* @media only screen and (min-width: 1100px) {
+	.header {
+		display: block;
+	}
+} */
+
+/* ===================HOVER===================== */
+
+.header-connect span:hover, a:hover {
+	color: var(--color-primary-variation);
+	transition: 0.1s;
+}
+

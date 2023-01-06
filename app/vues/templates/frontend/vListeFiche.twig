@@ -1,0 +1,84 @@
+
+<!-- =================FICHE========================================================= -->
+<div class="fiche-main">
+    <div class="fiche-Flex">
+        <div class="fiche-foto">
+            <div class="fiche-main-photo">
+                <picture>
+                    <img src="assets/jpeg/timbres/{{ timbre_image }}" alt="photo fiche">
+                </picture>
+            </div>
+            {# <div class="fiche-slider-Allphoto">
+                <div class="btn-gauche">
+                    <a> <img src="assets/svg/icons8-chevron-left-80.png" alt="photo fiche"></a>
+                </div>
+                <div>
+                    <picture class="fiche-slider-photo"> <img <img src="assets/jpeg/timbres/{{ timbre_image }}"
+                            alt="Image du timbre du Lord Stampee">
+                    </picture>
+                </div>
+                <div>
+                    <picture class="fiche-slider-photo"><img <img src="assets/jpeg/timbres/{{ timbre_image }}"
+                            alt="Image du timbre legion des volontaires francais">
+                    </picture>
+                </div>
+                <div>
+                    <picture class="fiche-slider-photo"><img <img src="assets/jpeg/timbres/{{ timbre_image }}"
+                            alt="timbres annees 1894">
+                    </picture>
+                </div>
+                <div class="btn-droite">
+                    <a> <img src="assets/svg/icons8-chevron-right-80.png" alt="photo fiche"> </a>
+                </div>
+            </div> #}
+        </div>
+        <div class="fiche-detail">
+            <div class="fiche-detail-info-haut">
+                <h2 class="fiche-nom">Titre: {{timbre_nom}}</h2>
+                <p class="fiche-lot">Lot No.<span> {{timbre_id}} </span></p>
+                <div class="fiche-description">
+                    <p> Categorie:</p>
+                    <h5> {{categorie_nom}}</h5>
+                    <p>Pays d'origin: </p>
+                    <h5> {{pays_nom}}</h5>
+                    <p>Timbre description: </p>
+                    <h5> {{timbre_description}}</h5>
+                </div>
+            </div>
+            <div class="fiche-detail-info-bas">
+                <div class="fiche-detail-header">
+                    <p class="date_start"> Debut enchere: <span> {{enchere_date_debut}} </span></p>
+                    <p class="date_end red_txt"> Fin enchere: <span> {{enchere_date_fin}} </span></p>
+                </div>
+                <p class="product_details-price ">Mise de depare: <span> {{timbre_prix}}.00 CAD</span></p>
+                {% if max_mise_prix == false %}
+                <p class="product_details-price ">Offre actuelle: <span> {{timbre_prix}}.00 CAD</span></p>
+                {% else %}
+                <p class="product_details-price ">Offre actuelle: <span> {{ max_mise_prix }}.00 CAD</span></p>
+                {% endif %}
+                <div class="fiche-detail-footer">
+                    {% if oUtilConn == true  %}
+                            {# <div>
+                                <span>Offrir {{ timbre_prix }}.00 CAD </span>
+                            </div> #}
+                    <form class="" method="POST" action="mise">
+                            <input name="timbre_prix_valeur" type="text" value="" ></input> 
+                            <input type="hidden" value="{{timbre_id}}" name="timbre_id" ></input>
+                            <input type="hidden" value="{{timbre_prix}}" name="timbre_prix" ></input>
+                            <input type="hidden" value="{{timbre_nom}}" name="timbre_nom" ></input>
+                            <input type="hidden" value="{{enchere_id}}" name="enchere_id" ></input>
+                            {# <input type="hidden" value="{{timbre_prix}}" name="timbre_prix" ></input> #}
+                            <input name="" type="submit" value="Miser" ></input> 
+                    </form>
+                    {% else %}
+                        <a class="cardBtn" href="membre">
+                            <div>
+                                <span>Se connecter</span>
+                            </div> 
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

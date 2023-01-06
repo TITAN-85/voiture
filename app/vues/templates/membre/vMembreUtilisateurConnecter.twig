@@ -1,0 +1,35 @@
+<script>history.pushState({}, '', 'membre?entite=connecter')</script>
+<script type="module" src="js/filtrer.js"></script>
+
+<body>
+  <header class="header header-bg">
+          <div class="header-haut">
+            <div>
+              <ul class="conexion-droite">
+                <li class="conexion-droite"><a href="accueil">Returner a Accueil</a></li>
+              </ul>
+            </div>
+        </div>
+<section> 
+  <h1>{{ titre|upper }}</h1>
+  
+    <form method="POST" action="membre">
+
+        <br><span>&nbsp;{{ messageErreurConnexion }}</span>
+		<div class="form-main">
+        <label>Courriel</label>
+        <input name="utilisateur_courriel" value="">
+		</div>
+        <label>Mot de passe</label>
+
+        <input type="password" name="utilisateur_mdp" value="">
+
+        <input type="submit" value="Envoyer">
+    </form>
+      {# <ul class="conexion-droite">
+        <li class="conexion-droite"><a href="ajouterUtilisateur">Ajouter Utilisateur</li>
+      </ul> #}
+  </div>
+</section>
+
+

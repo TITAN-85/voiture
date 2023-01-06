@@ -1,0 +1,61 @@
+<script>history.pushState({}, '', 'membre?entite=timbre')</script>
+<script type="module" src="js/filtrer.js"></script>
+<section>
+  <h1>{{ titre|upper }}</h1>
+  <div class="g timbres">
+
+  <section class="card-contenu">
+    <h1> Mes Voitures </h1>
+    <h2> {{message}}</h2>
+    <div class="card-main card-main-index">
+
+        {% for timbre in timbres %}
+            <article class="card">
+                <div class="card-header">
+                    <span class="card-lot">Lot {{timbre.timbre_id}} | {{ timbre.timbre_prix }} $</span> 
+                    <br>
+                    <span>{{ timbre.timbre_nom }}</span>
+                    <i aria-hidden="true" class="fa fa-truck shipping-indicator ng-star-inserted"
+                        title="Livraison disponible"></i>
+                </div>
+            <div class="cardBody">
+                <span class="">Date debut: {{timbre.enchere_date_debut}}</span>
+            </div>
+            <div>
+                <span class="icon-active"> Active
+                    <img class="icon-active" width="20" height="20" viewBox="0 0 40 40" fill="none" src="assets/svg/icons8-ok.svg" alt="image timbres francais">
+                </span>
+            </div>
+                <div class="cardBody">
+                    <a href="fiche?enchere_id={{ timbre.timbre_id }}" aria-label="foto timbre">
+                    {# <a href="modifier?timbre_id={{ timbre.timbre_id }}" aria-label="foto timbre"> #}
+                        <picture class="card-foto">
+                            <img src="assets/jpeg/timbres/{{ timbre.image_url }}" alt="image timbres francais">
+                        </picture>
+                    </a>
+                </div> 
+
+                <div class="card-footer">
+                    <h3>{{ timbre.timbre_nom }}</h3>
+                    <span> Prix : {{ timbre.timbre_prix }} CAD</span>
+
+                    <a class="cardBtn" href="supprimer?enchere_id={{ timbre.enchere_id }}">
+                        <div>
+                            <span> Effacer </span>
+                        </div>
+                    </a>
+                    <a class="cardBtn" href="modifier?timbre_id={{ timbre.timbre_id }}">
+                        <div>
+                            <span> Modifier </span>
+                        </div>
+                    </a>
+                </div>
+            </article>
+      {% endfor %}
+
+    </div>
+</section>
+
+  </div>
+</section>
+{{ include("admin/modaleSuppression.twig") }}

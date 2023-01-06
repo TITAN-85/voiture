@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <title>{{ titre }}</title>
+  <link rel="stylesheet" type="text/css" href="css/admin.css?v=1.1">
+  <link rel="stylesheet" type="text/css" href="css/admin.css?v=1.1">
+  <link rel="stylesheet" href="main.css">
+  <script type="module" src="js/admin.js"></script>
+</head>
+
+<body>
+  <div id="page">
+    <header>
+      <div id="puce"><div id="triangle"></div></div>
+      <p>
+        {{ oUtilConn.utilisateur_prenom }} {{ oUtilConn.utilisateur_nom }}
+        <a href="admin?entite=utilisateur&action=d">Déconnecter</a>
+      </p>
+      <nav>
+        <ul>
+          {# {% if oUtilConn.utilisateur_profil == constant('Utilisateur::PROFIL_ADMINISTRATEUR') or oUtilConn.utilisateur_profil == constant('Utilisateur::PROFIL_EDITEUR') %} #}
+          <li>
+            <hr>
+            <a href="accueil">Accueil</a>
+          </li>
+          <li>
+            {# <a href="admin?entite=timbres">Voir mes timbres</a> #}
+          </li>
+          <li>
+            {# <a href="#">Ajouter des timbre</a> #}
+          </li>
+          
+          {% if oUtilConn == true %}
+          <li>
+            <hr>
+            <a href="admin?entite=utilisateur">Utilisateurs</a>
+          </li>
+          {% endif %}
+        </ul>
+      </nav>
+    </header>
+    <main>
+
+    {{ include(templateMain) }}
+
+    </main>
+  </div>
+</body>
+</html>

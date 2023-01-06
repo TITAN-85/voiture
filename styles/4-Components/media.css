@@ -1,0 +1,421 @@
+/*------------------------------------*\
+  media
+\*------------------------------------*/
+/* MEDIA  1151px - 1700px */
+@media screen and (min-width: 1151px) and (max-width: 1700px) {
+	/* body {
+		background-color: rgb(209, 241, 203);
+	} */
+
+	.biografi-taill, 
+	.card-contenu, 
+	.offerts-main, 
+	.form-courriel-section, 
+	.catalogue,
+	footer div,
+	.menu .menu-list,
+	.header-haut,
+	.contenu-trouver,
+	main .fiche-main
+	{
+		max-width: 1100px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.card-main article {
+		width: 254px;
+	}
+	.last {
+		display: none;
+	}
+	.form-inputs input {
+		padding-right: 310px;
+	}
+
+	.card-contenu h2 {
+		text-align: center;
+	}
+
+	/* fiche-foto */
+	.fiche-foto img {
+		margin: 20px;
+	}
+	.fiche-main-photo {
+		min-height: 500px;
+	}
+	.fiche-foto {
+		max-width: 700px;
+	}
+	.fiche-detail {
+		max-width: 370px;
+	}
+	.btn-offre, .btn-suivre {
+		max-width: 135px;
+	}
+	
+	/* FIXME: */
+	.politique-bas a{
+		padding: 0;
+		font-size: 15px;
+	}
+	
+}
+
+/* ========================================================== */
+/* MEDIA  711px - 1150px */
+@media screen and (min-width: 711px) and (max-width: 1150px) {
+	/* body {
+		background-color: rgb(255, 0, 128);
+	} */
+	.biografi-taill, 
+	.card-contenu, 
+	.offerts-main, 
+	.form-courriel-section, 
+	.catalogue,
+	/* footer div, */
+	.menu .menu-list,
+	.header-haut,
+	.contenu-trouver,
+	main .fiche-main
+
+	{
+		max-width: 800px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	/* HEADER PHOTO */
+	.photo_banner_title {
+		font-size: var(--font-size-large);
+	}
+
+
+	/* MENU */
+	.menu {
+		/* flex-direction: column; */
+		text-align: center;
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+		max-height: 550px;
+	}
+
+	.menu a {
+		font-size: larger;
+		color: var(--color-dark);
+		
+	}
+	.menu li {
+		margin-bottom: 30px;
+	}
+
+	.menu a:hover {
+		color: var(--color-primary);
+	}
+
+	.menu-list {
+		flex-direction: column;
+	}
+	.icone-dropdown {
+		display: none;
+	}
+	.menu-dropdown:hover {
+		display: none;
+	}
+	.menu-principal {
+		font-size: 1.1rem;
+	}
+	nav li:hover .menu-dropdown {
+		display: none;
+	}
+
+	/* BIOGRAFI */
+	.biografi-main img {
+		margin: 40px;
+		max-width: 200px;
+	}
+	.biografi-main h2 {
+		padding: 0;
+		margin: 40px 0px 20px 0px;
+		color: var(--color-palette-second);
+	}
+	.biografi-principal div:first-child {
+		margin-left: 40px;
+	}
+	.biografi-main * {
+		margin-top: 40px;
+	}
+
+	.biografi-main p{
+		margin-bottom: 40px;
+	}
+
+	/* FOOTER */
+	
+	.input-footer {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.footer-menu-droite-main h2 {
+		right: 0;
+	}
+	.card-contenu h2 {
+		text-align: center;
+	}
+
+	.card-main article {
+		width: 320px;
+	}
+	.header-haut, .header-logo {
+		padding-left: 20px;
+	}
+	.menu-Accueil {
+		padding-left: 10px;
+	}
+	.langue, .input-bar{
+		padding-right: 20px;
+	}
+	.input-bar {
+		margin-left: 50px;
+	}
+
+	.menu {
+		inset: 0;
+	}
+
+	.fiche-Flex {
+		justify-content: center;
+	}
+	.last {
+		display: none;
+	}
+}
+
+/* MEDIA  320px - 710px */
+@media screen and (min-width: 320px ) and (max-width: 710px) {
+	/* body {
+		background-color: rgb(169, 121, 214);
+	} */
+	.card-contenu h2, 
+	.biografi-title {
+		text-align: center;
+	}
+	.header-haut {
+		flex-direction: column;
+		padding-left: 20px;
+	}
+
+	.icone-dropdown {
+		display: none;
+	}
+
+	/* HEADER PHOTO */
+	.photo_banner_title {
+		font-size: var(--font-size-regular);
+	}
+
+
+	/* BODY */
+	.offerts-body {
+		/* display: flex; */
+		flex-direction: column;
+		justify-content: center;
+		justify-items: center;
+
+	}
+	.offerts-body div {
+		margin-left: auto; 
+		margin-right: auto;
+		max-width: 50vh;
+		min-height: 0vh;
+	}
+
+	/* BIOGRAFIE */
+	.biografi-main img {
+		margin: 40px;
+		max-width: 250px;
+	}
+	.biografi-principal div:first-child {
+		margin-left: 0;
+	}
+
+	.biografi-main p {
+		margin-right: 40px;
+		margin-left: 40px;
+	}
+	.biografi-principal {
+		flex-direction: column;
+		
+	}
+	.form-inputs input, .form-inputs label {
+		display: inline-block;
+		padding: 0;
+		width: 400px;
+	}
+	.form-form {
+		margin: 40px;
+	}
+
+	/* FOOTER */
+
+	footer div:first-child {
+		flex-direction: column;
+	}
+	
+	.footer>div section {
+		margin-right: auto;
+    	margin-left: auto;
+	}
+
+	.footer-menu {
+		text-align: center;
+	}
+	.footer-menu {
+		margin-bottom: 10px;
+	}
+	.footer-menu-droite {
+		display: block;
+		text-align: center;
+	}
+	.input-footer input {
+		width: 300px;
+	}
+
+	.footer-footer div {
+		flex-direction: column;
+		justify-content: center;
+		justify-items: center;
+	}
+	.footer-footer>div div{
+		flex-direction: row;
+		justify-content: center;
+		justify-items: center;
+	}
+
+	.sidebar  {
+		display: none;
+	}
+
+	.contenu-trouver>.input-bar {
+		flex-direction: column;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		padding-right: 30px;
+		gap: 5px;
+	}
+
+	.contenu-trouver>.input-bar input {
+		padding: 10px;
+		margin: 0;
+		padding: 0;
+	}
+
+	.fiche-Flex {
+		justify-content: center;
+	}
+
+	.fiche-foto {
+		max-width: 500px;
+	}
+	.fiche-detail {
+		max-width: 370px;
+	}
+	.last {
+		display: none;
+	}
+	.fiche-foto img {
+		max-width: 450px;
+	}
+
+	.fiche-slider-Allphoto div {
+		border: 2px solid white;
+		max-width: 60px;
+		max-height: 60px;
+	}
+	/* fiche-foto */
+	.fiche-foto img {
+		margin: 0;
+	}
+}
+
+
+/* FOR cards */
+@media screen and (min-width: 320px ) and (max-width: 525px) {
+
+	.card-main article {
+		width: 320px;
+	}
+}
+
+
+@media screen and (max-width: 1150px) {
+	.politique {
+
+		flex-direction: row;
+		justify-content: center;
+		justify-items: center;
+	}
+
+	.politique-bas {
+		display: block;
+		text-align: center;
+	}
+
+	.footer-footer, footer>div section {
+		margin-right: 20px;
+		margin-left: 20px;
+	}
+
+	footer a, 
+	li, 
+	p, 
+	.footer-menu-droite{
+	  	color: var(--color-palette-second-var);
+	  	font-size: 0.8rem;
+	}
+
+
+	/* MENU */
+	.menu {
+		text-align: center;
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+		max-height: 550px;
+	}
+
+	.menu a {
+		font-size: larger;
+		color: var(--color-dark);
+		
+	}
+	.menu li {
+		margin-bottom: 30px;
+	}
+
+	.menu a:hover {
+		color: var(--color-primary);
+	}
+
+	.menu-list {
+		flex-direction: column;
+	}
+	.icone-dropdown {
+		display: none;
+	}
+	.menu-dropdown:hover {
+		display: none;
+	}
+	.menu-principal {
+		font-size: 1.1rem;
+	}
+	nav li:hover .menu-dropdown {
+		display: none;
+	}
+
+
+
+}

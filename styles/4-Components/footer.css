@@ -1,0 +1,103 @@
+/*------------------------------------*\
+  footer / components
+\*------------------------------------*/
+
+footer div:first-child{
+  display: flex;
+  justify-content: space-between;
+}
+
+.politique {
+  display: flex;
+  /* margin: 20px; */
+}
+
+.politique a, span {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+  margin: 0;
+  padding: 2px;
+  /* color: var(--color-palette-second-var); */
+  color: rgb(0, 0, 0);
+}
+/* FIXME: */
+
+/* main .span  {
+	color: white;
+}
+main > .errMsg {
+    color: rgb(255, 255, 255);
+} */
+
+footer {
+  background-color: var(--color-primary);
+  border-top: 4px solid var(--color-secondary);
+}
+
+.footer-footer {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid var(--color-secondary);
+  margin-top: 20px;
+}
+
+.footer-footer div {
+  display: flex;
+  justify-content: space-between;
+  margin: 1px;
+  margin-top: 20px;
+}
+.footer-footer div:last-child {
+    margin-bottom: 40px;
+}
+
+.footer-telephone {
+  color: var(--color-palette-first);
+  font-size: var(--font-size-regular);
+  font-family: var(--font-secondary);
+  padding: 0;
+}
+
+/* Max-width 1300 */
+footer div {
+  max-width: 1300px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+footer a, 
+li, 
+p, 
+.footer-menu-droite{
+  color: var(--color-palette-second-var);
+  font-size: 1rem;
+}
+
+
+.footer-menu-droite {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+footer a {
+  margin: 20px 0px 20px 0px;
+  padding: 0;
+}
+footer a:hover, i:hover {
+  color: var(--color-palette-second);
+} 
+
+footer section {
+  max-width: 450px;
+}
+
+.input-footer p, .input-footer form, .footer-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.footer-icons a{
+  margin: 0px 20px 0px 20px ;
+  font-size: 30px;
+}

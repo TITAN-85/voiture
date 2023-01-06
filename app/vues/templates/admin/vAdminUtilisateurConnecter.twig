@@ -1,0 +1,34 @@
+
+<body>
+  <header class="header header-bg">
+          <div class="header-haut">
+            <div>
+              <ul class="conexion-droite">
+                <li class="conexion-droite"><a href="accueil">Returner a Accueil</a></li>
+              </ul>
+            </div>
+        </div>
+<section>
+  <h1>{{ titre|upper }}</h1>
+  
+<form method="POST" action="admin">
+
+    <br><span>&nbsp;{{ messageErreurConnexion }}</span>
+
+    <label>Courriel</label>
+
+    <input name="utilisateur_courriel" value="">
+    
+    <label>Mot de passe</label>
+
+    <input type="password" name="utilisateur_mdp" value="">
+  
+    <input type="submit" value="Envoyer">
+</form>
+      <ul class="conexion-droite">
+        <li class="conexion-droite"><a href="ajouterUtilisateur">Ajouter Utilisateur</li>
+      </ul>
+  </div>
+</section>
+
+

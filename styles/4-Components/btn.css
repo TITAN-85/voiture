@@ -1,0 +1,130 @@
+/*------------------------------------*\
+  btn / components
+\*------------------------------------*/
+
+i {
+  color: var(--color-palette-second-var);
+}
+
+footer>div>section>a {
+  margin: 5px;
+  padding: 5px;
+}
+
+.icone-dropdown {
+  width: 15px;
+  color: var(--color-primary-variation);
+  filter: brightness(0);
+}
+
+.cardBtn {
+  display: block;
+  background-color: var(--color-primary);
+  bottom: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border-width: 0;
+
+}
+
+.cardBtn span, .btn-offre, .btn-suivre {
+  color: var(--color-white);
+}
+
+.cardBtn:hover, .btn-offre:hover, .btn-suivre:hover {
+  background-color: var(--color-primary-second-variation);
+  color: var(--color-white);
+}
+
+.card>.card-footer a {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.btn-offre, .btn-suivre {
+  width: 195px;
+  display: block;
+  background-color: var(--color-primary);
+  bottom: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border-width: 0;
+}
+
+.fiche-detail-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-items: center;
+}
+
+
+.fiche-slider-Allphoto .btn-droite, .fiche-slider-Allphoto .btn-gauche {
+  color: var(--color-white);
+}
+
+.btn-droite a,
+.btn-gauche a
+{
+  padding: 0px;
+}
+.btn-droite,
+.btn-gauche {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu-toggle, .menu-button-container, input[type=checkbox] {
+  display: none;
+}
+
+.icon-active {
+  margin-left: 20px;
+}
+
+
+@media screen and (max-width: 1150px) {
+
+  input[type=checkbox] {
+    display: block;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: var(--color-primary-second-variation);
+    padding: 20px;
+    border-radius: 30px;
+    position: absolute;
+    top: 150px;
+    right: 10px;
+    z-index: 2;
+  }
+  
+  input[type="checkbox"]::before {
+    content: "MENU";
+    font-size: large;
+    font-weight: 900;
+    color: white;
+    background-color: var(--color-primary-second-variation);
+  }
+  
+  input[type="checkbox"]:checked::before {
+    content: "Fermer"
+  }
+  
+  input[type="checkbox"]:not(:checked)~nav {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  @media screen and (max-width: 710px) {
+    input[type=checkbox] {
+      padding: 10px;
+      border-radius: 20px;
+      top: 5px;
+      right: 5px;
+    }
+  }
+
+}

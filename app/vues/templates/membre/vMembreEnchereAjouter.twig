@@ -1,0 +1,108 @@
+<script>history.pushState({}, '', 'membre?entite=timbre')</script>
+<script type="module" src="js/filtrer.js"></script>
+
+<section>
+  <h1>{{ post.published_at|date("m/d/Y - H:m:s", "America/Toronto")}}</h1>
+{# post.published_at now|date("m/d/Y", "Canada/Ottawa") #}
+        <section class="form-courriel-section">
+            <h2 class="form-titre-haut">Добавить Субару</h2>
+
+            <form class="form-form" enctype="multipart/form-data" action="ajEnchere" method="post">
+                <div class="form-main">
+
+                    {# enchere_date_debut #}
+                    <input type="hidden" id="courriel" name="enchere_date_debut" 
+                    value=" {{ post.published_at|date("m/d/Y", "America/Toronto") }}">
+
+                    {# nom #}
+                    <div>
+                        <h3>Машина / Мотор</h3>
+                        <label class="form-courriel" for="tNom"> 
+                            <input id="tNom" class="form-courriel" type="text" name="timbre_nom" placeholder="nom" value="Subaru Outback 2.5">
+                            <span class="errMsg">&nbsp;{{ erreurs.timbre_nom  }}</span>
+                        </label>
+                    </div>
+
+                    {# prix #}
+                    <div>
+                        <h3>Цена</h3>
+                        <label class="form-courriel" for="tPrix">
+                            <input id="tPrix" class="form-courriel" type="text" name="timbre_prix" placeholder="Цена">
+                            <span>&nbsp;{{ erreurs.timbre_prix }}</span>
+                        </label>
+                    </div>
+
+                    {# Пробег #}
+                    <div>
+                        <h3>Пробег</h3>
+                        <label class="form-courriel" for="tKm">
+                            <input id="tKm" class="form-courriel" type="text" name="timbre_km" placeholder="Пробег">
+                            <span>&nbsp;{{ erreurs.timbre_km }}</span>
+                        </label>
+                    </div>
+
+                    {# Год #}
+                    <div> 
+                        <h3>Год</h3>
+                        <label class="form-courriel" for="tAnee">
+
+                            <select name="timbre_anee" class="form-courriel" id="tAnee">
+                                <option value="2014">2014</option>
+                                <option value="2015" selected >2015</option>
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                            </select>
+
+                            {# <input id="tAnee" class="form-courriel" type="text" name="timbre_anee" placeholder="Год" value="201"> #}
+                            <span>&nbsp;{{ erreurs.timbre_anee }}</span>
+                        </label>
+                    </div>
+
+                    {# Pays d'origine #}    
+                    <div>
+                        <h3>Багажник / Кондиционер</h3>
+                        <select class="coffre" name="timbre_pays"> 
+                            {# <option value="0">Тип Багажника</option> #}
+                            {% for pay in pays %}
+                            <option value=" {{pay.pays_id}} "> {{pay.pays_nom}}</option>
+                            {% endfor %}
+                        </select>
+                        <span>&nbsp;{{ erreurs.timbre_pays }}</span>
+                    </div>
+
+                    {# Timbre Categorie #}    
+                    <div>
+                        <h3>Колёса</h3>
+                        <select class="pneu" name="timbre_categorie">
+                            {# <option value="1">{{categorie.categorie_nom}}</option>  #}
+                            {% for categorie in categories %}
+                            <option value="{{categorie.categorie_id}}">{{categorie.categorie_nom}}</option>
+                            {% endfor %}
+                        </select>
+                        <span>&nbsp;{{ erreurs.timbre_categorie }}</span>
+                    </div>
+
+                    {# Timbre detail | description - textarea #}    
+                    <div>
+                        <h3>Тут вставляй линк из FaceBook</h3>
+                            <textarea name="timbre_description" class="form-courriel" rows="5" cols="30" placeholder="http://......."></textarea>
+                        <span>&nbsp;{{ erreurs.timbre_description }}</span>
+                    </div>
+
+                    {# button envoye #}  
+                    <div>
+                        <h3>Фото</h3>
+                        <label class="photoCar" for="tFile">
+                            <input id="tFile" class="form-courriel" type="file" visbility="hidden" name="userfile">
+                        </label>
+                    </div>
+
+                    <button class="form-sumettre">Soumettre</button>
+                </div>
+            </form>
+        </section>
+
+
+
+{{ include("admin/modaleSuppression.twig") }}

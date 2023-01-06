@@ -1,0 +1,144 @@
+
+
+<!-- FORM de la Catalogue -->
+<div class="catalogue">
+    <div class="sidebar" data-js-list>
+        <h2>Recherche avancée</h2>
+        <div class="filterCartes ">
+            <form class="formSide" method="GET">
+                <div class="formGroup">
+                    <label for="statutAuction">Auction Statut</label>
+                    <select class="selectForm" id="statutAuction">
+                        <option selected="selected">Toute</option>
+                        <option>Bientôt fermé </option>
+                        <option>Meilleurs choix </option>
+                        <option>Chaud </option>
+                        <option>ouvert </option>
+                        <option>fermé </option>
+                        <option>Mis en exergue </option>
+                    </select>
+                </div>
+                <div class="formGroup">
+                    <label for="typeAuction">Type de lot</label>
+                    <select class="selectForm" id="typeAuction">
+                        <option selected="selected">Biddable Lots</option>
+                        <option>Live Webcast Lots </option>
+                        <option>Online Only Lots </option>
+                        <option>Absentee Lots </option>
+                        <option>Listing Only Lots </option>
+                    </select>
+                </div>
+                <div class="formGroup">
+                    <label for="nomePays">Pays</label>
+                    <select class="selectForm " id="nomePays">
+                        <option selected="selected">Touts les pays</option>
+                        <option>Australie</option>
+                        <option>Belgique</option>
+                        <option>Canada</option>
+                        <option>Danemark</option>
+                        <option>Émirats arabes unis</option>
+                        <option>États-Unis</option>
+                        <option>France</option>
+                        <option>Irlande</option>
+                        <option>Italie</option>
+                        <option>Japon</option>
+                        <option>Royaume-Uni </option>
+                        <option>Vatican</option>
+                    </select>
+                </div>
+                <div class="formGroup">
+                    <label for="stamp_category">Catégories</label>
+                    <select class="selectForm" id="stamp_category">
+                        <option selected="selected">Toutes les Catégories</option>
+                        <option>Animaux</option>
+                        <option>Aviation</option>
+                        <option>Histoire</option>
+                        <option>Guerre</option>
+                        <option>Nature</option>
+                        <option>Royauté</option>
+                        <option>Symboles</option>
+                        <option>Vedettes</option>
+                    </select>
+                </div>
+                <div class="formGroup">
+                    <label for="prixMinText">Prix-Min</label>
+                    <div class="filterPrix">
+                        <input id="prixMinText" class="prixMinInput" type="text" value="" placeholder
+                    </div>
+                    <label for="prixMaxText">Prix-Max</label>
+                    <div class="filterPrix">
+                        <input id="prixMaxText" class="prixMaxInput" type="text" value="" placeholder
+                    </div>
+                </div>
+                <div class="formGroup">
+                    <label for="stamp_sort">Triage</label>
+                    <select class="selectForm custom-select" id="stamp_sort">
+                        <option selected disabled>Paramètres de triage</option>
+                        <option>De A-Z</option>
+                        <option>De Z-A</option>
+                        <option>Les plus récents</option>
+                        <option>Prix Haut - Bas</option>
+                        <option>Prix Bas - Haut</option>
+                    </select>
+                </div>
+                <div class="formGroup">
+                    <button type="submit" class="btnRechercher">Rechercher</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="card-contenu">
+    <h2> Calendrier des Enchères </h2>
+    <div class="card-main">
+
+        {% for timbre in timbres %}
+        {# {% if timbre.timbre_id < 9 %} #}
+        {% if timbre.enchere_date_fin < dateCourent %}
+        <article class="card">
+            <div class="card-header">
+                <span class="card-lot">Lot {{timbre.timbre_id}} | 
+                    {% if timbre.mise_prix == false %}
+                        {{ timbre.timbre_prix }}
+                    {% else %}
+                        {{ timbre.mise_prix }}
+                    {% endif %} .00 CAD</span> |
+                <a aria-label="122$ prix" href="">
+                    <span>{{ timbre.timbre_nom }}</span>
+                </a>
+                <i aria-hidden="true" class="fa fa-truck shipping-indicator ng-star-inserted"
+                    title="Livraison disponible"></i>
+            </div>
+            <div class="cardBody">
+                <span class="">Date fin: {{timbre.enchere_date_fin}}</span>
+            </div>
+                <div>
+                    <span class="icon-active"> Enchere fermee 
+                        <img class="icon-active" width="20" height="20" viewBox="0 0 40 40" fill="none" src="assets/svg/icons8-close.svg" alt="image timbres francais">
+                    </span>
+                </div>
+            <div class="cardBody">
+                <a href="" aria-label="foto timbre">
+                    <picture class="card-foto">
+                        <img src="assets/jpeg/timbres/{{ timbre.image_url }}" alt="image timbres francais">
+                    </picture>
+                </a>
+            </div>
+            
+            <div class="card-footer">
+                <h3>{{ timbre.timbre_nom }}</h3>
+                    {% if timbre.mise_prix == false %}
+                        <span>Derniere Mise: {{ timbre.timbre_prix }}.00 CAD</span>
+                    {% else %}
+                        <span>Derniere Mise: {{ timbre.mise_prix }}.00 CAD</span>
+                    {% endif %}
+            </div>
+        </article>
+            {% endif %}
+        {# {% endif %} #}
+  {% endfor %}
+        </div>
+    </div>
+

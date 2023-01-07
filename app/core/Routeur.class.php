@@ -10,18 +10,19 @@ class Routeur {
   private $routes = [
   // uri,                   classe,                                méthode
   // ---------------------------------------------------------------------
-    ["membre",              "Membre",                     "gererEntite"  ],
-    ["admin",               "Admin",                      "gererEntite"  ],
+    ["membre",              "Membre",                       "gererEntite"],
+    ["admin",               "Admin",                        "gererEntite"],
     ["",                    "Frontend",                   "listerAccueil"],
+    ["/",                   "Frontend",                   "listerAccueil"],
     ["accueil",             "Frontend",                   "listerAccueil"],
-    ["fiche",               "Frontend",                   "listerFiche"  ],
+    ["fiche",               "Frontend",                     "listerFiche"],
     ["modifier",            "EnchereTimbre",        "modifierEnchereView"],
     ["modifEnchere",        "EnchereTimbre",            "modifierEnchere"],
     ["supprimer",           "EnchereTimbre",           "supprimerEnchere"],
     ["mise",                "MiseTimbre",                          "mise"],
     ["rechercher",          "EnchereTimbre",          "rechercherEnchere"],
     ["catalogue",           "Frontend",                 "listerCatalogue"],
-    ["catalogueArch",           "Frontend",         "listerCatalogueArch"],
+    ["catalogueArch",       "Frontend",             "listerCatalogueArch"],
     ["ajouterUtilisateur",  "Frontend",              "ajouterUtilisateur"],
     ["creeUtilisateur",     "MembreUtilisateur",     "ajouterUtilisateur"],
     ["ajEnchere",           "EnchereTimbre",             "ajouterEnchere"]
@@ -39,6 +40,7 @@ class Routeur {
   // const BASE_URI = '/kunden/homepages/41/d947040641/htdocs/';
   const BASE_URI = '/'; 
 
+  
   const ERROR_FORBIDDEN = "HTTP 403";
   const ERROR_NOT_FOUND = "HTTP 404";
 

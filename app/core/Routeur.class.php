@@ -34,11 +34,11 @@ class Routeur {
   // const BASE_URI = '/Projet-web-1/';
 
   // HOME
-  // const BASE_URI = '/git/PROJET-WEB-1/Voitures/'; 
+  const BASE_URI = '/git/voiture/'; 
 
   //.ionos.com
   // const BASE_URI = '/kunden/homepages/41/d947040641/htdocs/';
-  const BASE_URI = '/'; 
+  // const BASE_URI = '/'; 
 
   
   const ERROR_FORBIDDEN = "HTTP 403";

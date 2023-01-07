@@ -16,6 +16,8 @@ class Admin extends Routeur {
   protected $classRetour = "fait";
   protected $messageRetourAction = "";
 
+  private $methodes;
+
   /**
    * Constructeur qui initialise des propriétés à partir du query string
    * 

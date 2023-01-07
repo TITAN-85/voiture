@@ -6,6 +6,7 @@
 
 class MembreUtilisateur extends Membre {
 
+  protected $msgErrAjouterUtilisateur;
   protected $methodes = [
     'd'           => ['nom'    =>'deconnecter'],
     'a'           => ['nom'    =>'ajouterUtilisateur'],
@@ -89,7 +90,7 @@ class MembreUtilisateur extends Membre {
    * Ajouter un utilisateur
    */
   public function ajouterUtilisateur() {
-    $msgErrAjouterUtilisateur = '';
+    // $msgErrAjouterUtilisateur = '';
     if (count($_POST) !== 0) {
       $utilisateur = $_POST;
       $oUtilisateur = new Utilisateur($utilisateur);
@@ -114,7 +115,7 @@ class MembreUtilisateur extends Membre {
         }
       }
     } else {
-      $msgErrAjouterUtilisateur = "Beaucoup des erreures OMG";
+      $this->msgErrAjouterUtilisateur = "Beaucoup des erreures OMG";
       $utilisateur = [];
       $erreurs     = [];
     }
@@ -122,7 +123,7 @@ class MembreUtilisateur extends Membre {
     (new Vue)->generer(
       'vUtilisateurAjouter',
       [
-        'msgErrAjouterUtilisateur' => $msgErrAjouterUtilisateur,
+        'msgErrAjouterUtilisateur' => $this->msgErrAjouterUtilisateur,
         'oUtilConn'   => self::$oUtilConn,
         'titre'       => 'Ajouter un utilisateur',
         'utilisateur' => $utilisateur,

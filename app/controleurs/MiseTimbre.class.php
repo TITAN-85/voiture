@@ -17,7 +17,7 @@ class MiseTimbre extends Routeur
     protected $mise_prix_actuel;
     protected $timbreNom;
     protected $messageMise;
-    protected $max_Mise_prix;
+    protected $max_mise_prix;
     protected $mise_prix_valeur;
 
     /**

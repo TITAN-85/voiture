@@ -8,6 +8,8 @@ class Frontend extends Routeur {
 
   private $timbre_id;
   private $enchere_id;
+  private $mise;
+  private $oUtilConn;
   
   /**
    * Constructeur qui initialise des propriétés à partir du query string

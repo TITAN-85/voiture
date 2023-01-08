@@ -18,7 +18,6 @@ class Membre extends Routeur
 
   /**
    * Constructeur qui initialise des propriétés à partir du query string
-   * 
    */
   public function __construct()
   {

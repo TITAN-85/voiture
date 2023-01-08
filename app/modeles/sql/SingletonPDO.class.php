@@ -4,11 +4,11 @@ class SingletonPDO extends PDO
 {
   private static $instance = null;
 
-  // const DB_SERVEUR  = 'db5011450633.hosting-data.io';
-  // const DB_NOM      = 'dbs9660527';
-  // const DB_DSN      = 'mysql:host='. self::DB_SERVEUR .';dbname='. self::DB_NOM.';charset=utf8'; 
-  // const DB_LOGIN    = 'dbu2951294';
-  // const DB_PASSWORD = 'SpawN2012ivoiture';
+  const DB_SERVEUR  = 'db5011450633.hosting-data.io';
+  const DB_NOM      = 'dbs9660527';
+  const DB_DSN      = 'mysql:host='. self::DB_SERVEUR .';dbname='. self::DB_NOM.';charset=utf8'; 
+  const DB_LOGIN    = 'dbu2951294';
+  const DB_PASSWORD = 'SpawN2012ivoiture';
 
   // WEBDEV:
   // const DB_SERVEUR  = 'localhost';
@@ -17,11 +17,11 @@ class SingletonPDO extends PDO
   // const DB_LOGIN    = 'e2295298';
   // const DB_PASSWORD = 'N2l9MjSSqxLCqU33D1PR';
 
-  const DB_SERVEUR  = 'localhost';
-  const DB_NOM      = 'voiture';
-  const DB_DSN      = 'mysql:host=' . self::DB_SERVEUR . ';dbname=' . self::DB_NOM . ';charset=utf8';
-  const DB_LOGIN    = 'root';
-  const DB_PASSWORD = '';
+  // const DB_SERVEUR  = 'localhost';
+  // const DB_NOM      = 'voiture';
+  // const DB_DSN      = 'mysql:host=' . self::DB_SERVEUR . ';dbname=' . self::DB_NOM . ';charset=utf8';
+  // const DB_LOGIN    = 'root';
+  // const DB_PASSWORD = '';
 
   private function __construct()
   {

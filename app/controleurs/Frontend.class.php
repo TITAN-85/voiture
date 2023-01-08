@@ -159,8 +159,4 @@ class Frontend extends Routeur {
             ),
             "gabarit-frontend");
   }
-
-
-
-
 }

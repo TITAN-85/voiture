@@ -19,7 +19,6 @@ class MembreTimbre extends Membre {
   /**
    * Constructeur qui initialise des propriétés à partir du query string
    * et la propriété oRequetesSQL déclarée dans la classe Routeur
-   * 
    */
   public function __construct() {
     $this->timbre_id = $_GET['timbre_id'] ?? null;
@@ -85,7 +84,7 @@ class MembreTimbre extends Membre {
       'gabarit-membre');
   }
 
-    /**
+  /**
    * Voir les Accueil
    */  
   public function listerAccueil() {
@@ -119,8 +118,4 @@ class MembreTimbre extends Membre {
       ],
       'gabarit-membre');
   }
-
-
-
-
 }

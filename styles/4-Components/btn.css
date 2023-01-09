@@ -120,8 +120,8 @@ footer>div>section>a {
 
   @media screen and (max-width: 710px) {
     input[type=checkbox] {
-      padding: 10px;
-      border-radius: 20px;
+      padding: 20px;
+      border-radius: 30px;
       top: 5px;
       right: 5px;
     }

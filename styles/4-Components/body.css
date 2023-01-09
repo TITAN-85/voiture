@@ -401,7 +401,7 @@ picture {
 }
 
 main>section h1 {
-    max-width: 500px;
+    /* max-width: 500px; */
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -575,4 +575,46 @@ main .voiture01,
     margin-bottom: 10px;
     font-weight: bold;
     font-size: 20px;
+}
+
+.session-name {
+    color: black;
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+}
+
+@media screen and (min-width: 320px ) and (max-width: 710px) {
+    .g.voitures {
+        grid-template-columns: repeat(8, max-content);
+    }
+
+    .g {
+        display: grid;
+        grid-gap: 3px;
+        max-width: 450px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-bottom: 40px;
+    }
+
+    .t {
+        text-align: center;
+        background-color: var(--color-palette-second-var);
+        border-radius: 1px;
+        box-shadow: 2px 2px 4px #aaaaaa00;
+        border-radius: 1px;
+        font-weight: normal;
+        max-width: 68px;
+    }
+    .t, .c {
+        box-sizing: border-box;
+        padding: 10px 4px;
+        line-height: 12px;
+        border-radius: 1px;
+        max-width: 68px;
+    }
+    .hd {
+        display: none;
+    }
 }

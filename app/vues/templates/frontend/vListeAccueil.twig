@@ -3,9 +3,10 @@
 <div class="photo_banner">
     <img src="assets/jpeg/other_images/01.jpg" alt="mason b stamps timbres">
     <div class="photo_banner_text">
-        <h1 class="photo_banner_title">Subaru 2015-2017</h1>
-        <p>On ajoute les Subaru de 2015 a 2017</p>
-        <a href="catalogue" class="btn"> Acceder aux toutes vos Subaru</a>
+        <h1 class="photo_banner_title">The website is under construction</h1>
+        {# <h1 class="photo_banner_title">Subaru 2015-2018</h1> #}
+        <p>Add car from 2015 to 2018</p>
+        <a href="catalogue" class="btn"> Access to all cars</a>
     </div>
 </div>
 <!-- =================CARD========================================================= -->
@@ -60,12 +61,12 @@
             <div class="card-footer">
                 <h3>{{ timbre.timbre_nom }}</h3>
                     {% if timbre.mise_prix == false %}
-                        <span>Prix initial: {{ timbre.timbre_prix }}  $</span>
+                        <span>Start price: {{ timbre.timbre_prix }}  $</span>
                     {% else %}
                         <span>Derniere Mise: {{ timbre.mise_prix }}  $</span>
                     {% endif %}
                     <div>
-                        <span>Пробег: {{ timbre.timbre_km }} km</span>
+                        <span>Mileage: {{ timbre.timbre_km }} km</span>
                     </div>
             {% if oUtilConn == true  %}
                 <a class="cardBtn" href="fiche?enchere_id={{ timbre.enchere_id }}" aria-label="Offrir{{ timbre.timbre_prix }}">
@@ -92,159 +93,143 @@
     {# {% if (timbre.timbre_prix * 1.1)|round < 15000 %} #}
     {# {% if (timbre.timbre_prix )|round < 18000 %} #}
 
-    <div class="voiture01"> Машины До 18.000 $ без Такс</div>
+<div class="voiture01"> Cars up to 19.000$ </div>
 <section>
-    <div class="g voitures">
-        <div class="t">Фото</div>
-        <div class="t">Именна</div>
-        <div class="t">Дата добавление</div>
-        <div class="t">Год</div>
-        <div class="t">Комплектация</div>    
-        <div class="t">Колёса</div>    
-        <div class="t">Пробег</div>
-        <div class="t">Цена</div>    
-        <div class="t">Цена+10%</div>
-        <div class="t">Цена+15%</div>
-        <div class="t">Ценность</div>
-        <div class="t">Ссылка</div>
+    <div class="g voitures card-contenu">
+        <div class="t">Photo</div>
+        <div class="t hd">Name</div>
+        <div class="t hd">Date added</div>
+        <div class="t">Year</div>
+        <div class="t">accessoires</div>    
+        <div class="t">wheels</div>    
+        <div class="t">Mileage</div>
+        <div class="t">Price</div>    
+        <div class="t hd">Price+10%</div>
+        <div class="t hd">Price+15%</div>
+        <div class="t">Value</div>
+        <div class="t">Link</div>
         {# {% set break = true %} #}
-    {# {% endif %} #}
-{# {% endfor %} #}
+        {# {% endif %} #}
+        {# {% endfor %} #}
 
-
-
-{% for timbre in timbres %}
-
-    {% if (timbre.timbre_prix )|round < 18000 %}
-    {# {% if (timbre.timbre_prix * 1.1)|round < 15000 %} #}
-    
-        <div class="l">
-
-            {% if oUtilConn == true  %}
-            <a href="fiche?enchere_id={{ timbre.enchere_id }}" aria-label="foto timbre">
-            {% else %}
-            <a href="membre" aria-label="foto timbre">
+        {% for timbre in timbres %}
+            {% if (timbre.timbre_prix )|round < 19000 %}
+                {# {% if (timbre.timbre_prix * 1.1)|round < 15000 %} #}
+                <div class="l">
+                    {% if oUtilConn == true  %}
+                    <a href="fiche?enchere_id={{ timbre.enchere_id }}" aria-label="foto timbre">
+                    {% else %}
+                    <a href="membre" aria-label="foto timbre">
+                    {% endif %}
+                    <picture><img src="assets/jpeg/timbres/{{ timbre.image_url }}" alt="image timbres francais">
+                    </a>
+        
+                    <div class="c dr hd">{{ timbre.timbre_nom }}</div>
+                    <div class="c dr hd">{{ timbre.enchere_date_debut }}</div>
+                    <div class="c   ">{{ timbre.timbre_anee }}</div>
+                    <div class="c   ">{{ timbre.pays_nom }}</div>
+                    <div class="c   ">{{ timbre.categorie_nom }}</div>
+                    <div class="c   b">{{ timbre.timbre_km }}</div>
+                    <div class="c   r">{{ timbre.timbre_prix }}</div>
+                    <div class="c   rr hd">{{ (timbre.timbre_prix * 1.1)|round }}</div>
+                    <div class="c   rr hd">{{ (timbre.timbre_prix * 1.15)|round }}</div>
+                    <div class="c   ">{{ timbre.timbre_rate }}</div>
+                    <div class="c   "><a class="cardBtn" href="{{ timbre.timbre_description }}" target="_blank" ><div>Open Link</div></a></div>
+                </div>
             {% endif %}
-            <picture><img src="assets/jpeg/timbres/{{ timbre.image_url }}" alt="image timbres francais">
-            </a>
-
-            <div class="c dr">{{ timbre.timbre_nom }}</div>
-            <div class="c dr">{{ timbre.enchere_date_debut }}</div>
-            <div class="c   ">{{ timbre.timbre_anee }}</div>
-            <div class="c   ">{{ timbre.pays_nom }}</div>
-            <div class="c   ">{{ timbre.categorie_nom }}</div>
-            <div class="c   b">{{ timbre.timbre_km }}</div>
-            <div class="c   r">{{ timbre.timbre_prix }}</div>
-            <div class="c   rr">{{ (timbre.timbre_prix * 1.1)|round }}</div>
-            <div class="c   rr">{{ (timbre.timbre_prix * 1.15)|round }}</div>
-            <div class="c   ">{{ timbre.timbre_rate }}</div>
-            <div class="c   "><a class="cardBtn" href="{{ timbre.timbre_description }}" target="_blank" ><div> Открыть ссылку</div></a></div>
-        </div>
-    {% endif %}
-{% endfor %} 
-
+        {% endfor %} 
     </div>
 </section>
 
-    <div class="voiture02"> Машины от 18.000 до 19.000$ без Такс</div>
+
+
+<div class="voiture02"> Cars from 19.000 to 20.000$ </div>
 <section>
     <div class="g voitures">
-        <div class="t">Фото</div>
-        <div class="t">Именна</div>
-        <div class="t">Дата добавление</div>
-        <div class="t">Год</div>
-        <div class="t">Комплектация</div>    
-        <div class="t">Колёса</div>    
-        <div class="t">Пробег</div>
-        <div class="t">Цена</div>    
-        <div class="t">Цена+10%</div>
-        <div class="t">Цена+15%</div>
-        <div class="t">Ценность</div>
-        <div class="t">Ссылка</div>
-
+        <div class="t">Photo</div>
+        <div class="t hd">Name</div>
+        <div class="t hd">Date added</div>
+        <div class="t">Year</div>
+        <div class="t">accessoires</div>    
+        <div class="t">wheels</div>    
+        <div class="t">Mileage</div>
+        <div class="t">Price</div>    
+        <div class="t hd">Price+10%</div>
+        <div class="t hd">Price+15%</div>
+        <div class="t">Value</div>
+        <div class="t">Link</div>
     
-{% for timbre in timbres %}
-    {# {% if (timbre.timbre_prix * 1.1)|round > 15000 and (timbre.timbre_prix * 1.1)|round < 19000 %} #}
-    {% if (timbre.timbre_prix)|round > 18000 and (timbre.timbre_prix )|round < 19000 %}
-    
-        <div class="l">
+        {% for timbre in timbres %}
+            {# {% if (timbre.timbre_prix * 1.1)|round > 15000 and (timbre.timbre_prix * 1.1)|round < 19000 %} #}
+            {% if (timbre.timbre_prix)|round > 19000 and (timbre.timbre_prix )|round < 20000 %}
+                <div class="l">
+                    {% if oUtilConn == true  %}
+                    <a href="fiche?enchere_id={{ timbre.enchere_id }}" aria-label="foto timbre">
+                    {% else %}
+                    <a href="membre" aria-label="foto timbre">
+                    {% endif %}
+                    <picture><img src="assets/jpeg/timbres/{{ timbre.image_url }}" alt="image timbres francais">
+                    </a>
 
-            {% if oUtilConn == true  %}
-            <a href="fiche?enchere_id={{ timbre.enchere_id }}" aria-label="foto timbre">
-            {% else %}
-            <a href="membre" aria-label="foto timbre">
+                    <div class="c dr hd">{{ timbre.timbre_nom }}</div>
+                    <div class="c dr hd">{{ timbre.enchere_date_debut }}</div>
+                    <div class="c   ">{{ timbre.timbre_anee }}</div>
+                    <div class="c   ">{{ timbre.pays_nom }}</div>
+                    <div class="c   ">{{ timbre.categorie_nom }}</div>
+                    <div class="c   b">{{ timbre.timbre_km }}</div>
+                    <div class="c   r">{{ timbre.timbre_prix }}</div>
+                    <div class="c   rr hd">{{ (timbre.timbre_prix * 1.1)|round }}</div>
+                    <div class="c   rr hd">{{ (timbre.timbre_prix * 1.15)|round }}</div>
+                    <div class="c   ">{{ timbre.timbre_rate }}</div>
+                    <div class="c   "><a class="cardBtn" href="{{ timbre.timbre_description }}" target="_blank" ><div>Open Link</div></a></div>
+                </div>
             {% endif %}
-            <picture><img src="assets/jpeg/timbres/{{ timbre.image_url }}" alt="image timbres francais">
-            </a>
-
-            <div class="c dr">{{ timbre.timbre_nom }}</div>
-            <div class="c dr">{{ timbre.enchere_date_debut }}</div>
-            <div class="c   ">{{ timbre.timbre_anee }}</div>
-            <div class="c   ">{{ timbre.pays_nom }}</div>
-            <div class="c   ">{{ timbre.categorie_nom }}</div>
-            <div class="c   b">{{ timbre.timbre_km }}</div>
-            <div class="c   r">{{ timbre.timbre_prix }}</div>
-            <div class="c   rr">{{ (timbre.timbre_prix * 1.1)|round }}</div>
-            <div class="c   rr">{{ (timbre.timbre_prix * 1.15)|round }}</div>
-            <div class="c   ">{{ timbre.timbre_rate }}</div>
-            <div class="c   "><a class="cardBtn" href="{{ timbre.timbre_description }}" target="_blank" ><div> Открыть ссылку</div></a></div>
-        </div>
-    {% endif %}
-{% endfor %} 
-
+        {% endfor %} 
     </div>
 </section>
 
 
 
 
-
-
-    <div class="voiture03"> Машины от 19.000$ без такс</div>
+<div class="voiture03"> Cars from 20.000$ </div>
 <section>
     <div class="g voitures">
-        <div class="t">Фото</div>
-        <div class="t">Именна</div>
-        <div class="t">Дата добавление</div>
-        <div class="t">Год</div>
-        <div class="t">Комплектация</div>    
-        <div class="t">Колёса</div>    
-        <div class="t">Пробег</div>
-        <div class="t">Цена</div>    
-        <div class="t">Цена+10%</div>
-        <div class="t">Цена+15%</div>
-        <div class="t">Ценность</div>
-        <div class="t">Ссылка</div>
+        <div class="t">Photo</div>
+        <div class="t hd">Name</div>
+        <div class="t hd">Date added</div>
+        <div class="t">Year</div>
+        <div class="t">accessoires</div>    
+        <div class="t">wheels</div>    
+        <div class="t">Mileage</div>
+        <div class="t">Price</div>    
+        <div class="t hd">Price+10%</div>
+        <div class="t hd">Price+15%</div>
+        <div class="t">Value</div>
+        <div class="t">Link</div>
 
-    
-{% for timbre in timbres %}
-    {# {% if (timbre.timbre_prix * 1.1)|round > 19000 %} #}
-    {% if (timbre.timbre_prix )|round > 19000 %}
-    
-        <div class="l">
-
-            {% if oUtilConn == true  %}
-            <a href="fiche?enchere_id={{ timbre.enchere_id }}" aria-label="foto timbre">
-            {% else %}
-            <a href="membre" aria-label="foto timbre">
+        {% for timbre in timbres %}
+            {# {% if (timbre.timbre_prix * 1.1)|round > 19000 %} #}
+            {% if (timbre.timbre_prix )|round > 20000 %}
+                <div class="l">
+                    {% if oUtilConn == true  %}
+                    <a href="fiche?enchere_id={{ timbre.enchere_id }}" aria-label="foto timbre">
+                    {% else %}
+                    <a href="membre" aria-label="foto timbre">
+                    {% endif %}
+                    <picture><img src="assets/jpeg/timbres/{{ timbre.image_url }}" alt="image timbres francais"></a>
+                    <div class="c dr hd">{{ timbre.timbre_nom }}</div>
+                    <div class="c dr hd">{{ timbre.enchere_date_debut }}</div>
+                    <div class="c   ">{{ timbre.timbre_anee }}</div>
+                    <div class="c   ">{{ timbre.pays_nom }}</div>
+                    <div class="c   ">{{ timbre.categorie_nom }}</div>
+                    <div class="c   b">{{ timbre.timbre_km }}</div>
+                    <div class="c   r">{{ timbre.timbre_prix }}</div>
+                    <div class="c   rr hd">{{ (timbre.timbre_prix * 1.1)|round }}</div>
+                    <div class="c   rr hd">{{ (timbre.timbre_prix * 1.15)|round }}</div>
+                    <div class="c   ">{{ timbre.timbre_rate }}</div>
+                    <div class="c   "><a class="cardBtn" href="{{ timbre.timbre_description }}" target="_blank" ><div>Open Link</div></a></div>
+                </div>
             {% endif %}
-            <picture><img src="assets/jpeg/timbres/{{ timbre.image_url }}" alt="image timbres francais">
-            </a>
-
-            <div class="c dr">{{ timbre.timbre_nom }}</div>
-            <div class="c dr">{{ timbre.enchere_date_debut }}</div>
-            <div class="c   ">{{ timbre.timbre_anee }}</div>
-            <div class="c   ">{{ timbre.pays_nom }}</div>
-            <div class="c   ">{{ timbre.categorie_nom }}</div>
-            <div class="c   b">{{ timbre.timbre_km }}</div>
-            <div class="c   r">{{ timbre.timbre_prix }}</div>
-            <div class="c   rr">{{ (timbre.timbre_prix * 1.1)|round }}</div>
-            <div class="c   rr">{{ (timbre.timbre_prix * 1.15)|round }}</div>
-            <div class="c   ">{{ timbre.timbre_rate }}</div>
-            <div class="c   "><a class="cardBtn" href="{{ timbre.timbre_description }}" target="_blank" ><div> Открыть ссылку</div></a></div>
-        </div>
-    {% endif %}
-{% endfor %} 
-
+        {% endfor %} 
     </div>
 </section>

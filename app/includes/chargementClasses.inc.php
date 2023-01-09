@@ -11,6 +11,8 @@ function chargerClasse($classe) {
 
   foreach ($dossiers as $dossier) {
     $fichier = './app/'.$dossier.$classe.'.class.php';
+    // $fichier = '/kunden/homepages/41/d947040641/htdocs/var/www/Voiture-v0.1/app/'.$dossier.$classe.'.class.php';
+
     if (file_exists($fichier)) {
       require $fichier;
     }

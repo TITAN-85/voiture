@@ -27,9 +27,7 @@ class Routeur {
     ["ajouterUtilisateur",  "Frontend",              "ajouterUtilisateur"],
     ["creeUtilisateur",     "MembreUtilisateur",     "ajouterUtilisateur"],
     ["ajEnchere",           "EnchereTimbre",             "ajouterEnchere"],
-
     // ["",                    "Membre",                       "gererEntite"],
-
   ];
 
   protected $oRequetesSQL; // objet RequetesSQL utilisé par tous les contrôleurs
@@ -38,11 +36,11 @@ class Routeur {
   // const BASE_URI = '/Projet-web-1/';
 
   // HOME
-  const BASE_URI = '/git/voiture/';
+  // const BASE_URI = '/git/voiture/';
 
   //.ionos.com
   // const BASE_URI = '/kunden/homepages/41/d947040641/htdocs/';
-  // const BASE_URI = '/'; 
+  const BASE_URI = '/'; 
 
   
   const ERROR_FORBIDDEN = "HTTP 403";

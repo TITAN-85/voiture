@@ -65,8 +65,10 @@ class Admin extends Routeur {
       // } else {
         // $this->$methode();
       // }
-    } else {
-      throw new Exception("L'action ".self::$action." de l'entité ".self::$entite." n'existe pas.");
+
+      
+    // } else {
+    //   throw new Exception("L'action ".self::$action." de l'entité ".self::$entite." n'existe pas.");
     }
   }
 

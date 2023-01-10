@@ -29,12 +29,12 @@
                     
 
                     {% if oUtilConn == false %}
-                    <li class="conexion"><a href="membre"> Se connecter |</a></li>
-                    <li class="conexion"><a href="ajouterUtilisateur">| Nouveau soumissionnaire</a></li>
+                    <li class="conexion"><a href="membre"> Login |</a></li>
+                    <li class="conexion"><a href="ajouterUtilisateur">| Sign in</a></li>
                     {# (isset($_SESSION['oUtilConn']) #}
                     {% endif %}
                     {% if oUtilConn == true %}
-                        <li class="conexion"><a href="membre?entite=utilisateur&action=d">Déconnecter</a></li>
+                        <li class="conexion"><a href="membre?entite=utilisateur&action=d">Logout</a></li>
                     {% endif %}
                     <li class="conexion">{{ oUtilConn.utilisateur_prenom }} {{ oUtilConn.utilisateur_nom }}</li> 
                 </ul>
@@ -89,29 +89,29 @@
     <nav class="menu">
         <!-- menu principal -->
         <ul class="menu-list">
-            <li class="menu-principal menu-Accueil"><a href="accueil">Accueil</a></li>
-            <li class="menu-principal menu-Accueil"><a href="catalogue">Catalogue Subaru</a></li>
-            <li class="menu-principal "><a href="membre?entite=timbre&action=f">Mon Profil</a></li>
-            <li class="menu-principal"><a href="membre?entite=timbre&action=f">Посмотреть все машины</a></li>
-            <li class="menu-principal"><a href="membre?entite=timbre&action=fo">Добавить все машину тут</a></li>
-            <li class="menu-principal"><a href="catalogue">contactez-nous</a></li>
+            <li class="menu-principal menu-Accueil"><a href="accueil">HOME</a></li>
+            <li class="menu-principal menu-Accueil"><a href="catalogue">Subaru Catalog</a></li>
+            <li class="menu-principal "><a href="membre?entite=timbre&action=f">My profile</a></li>
+            <li class="menu-principal"><a href="membre?entite=timbre&action=f">All my cars</a></li>
+            <li class="menu-principal"><a href="membre?entite=timbre&action=fo">Add car</a></li>
+            <li class="menu-principal"><a href="catalogue">contact us</a></li>
         </ul>
     </nav>
 
 
 <!-- Menu Membre -->
-    <nav class="menu-membre">
+    {# <nav class="menu-membre"> #}
         <!-- menu principal -->
-        <ul class="menu-list-membre">
+        {# <ul class="menu-list-membre"> #}
             {# <li class="menu-principal menu-Accueil"><a href="accueil">Accueil</a></li> #}
             {# <li class="menu-principal menu-Accueil"><a href="catalogue">Catalogue</a></li> #}
-            <li class="menu-principal-membre"><a href="membre?entite=timbre&action=f">Посмотреть все машины</a></li>
-            <li class="menu-principal-membre"><a href="membre?entite=timbre&action=fo">Добавить все машину тут</a></li>
+            {# <li class="menu-principal-membre"><a href="membre?entite=timbre&action=f">All cars</a></li> #}
+            {# <li class="menu-principal-membre"><a href="membre?entite=timbre&action=fo">Add car</a></li> #}
             {# <li class="menu-principal-membre"><a href="membre?entite=timbre&action=h">Не важно. тут не нажимай</a></li> #}
             {# <li class="menu-principal"><a href="admin?entite=utilisateur&action=d">Déconnecter</a></li> #}
             {# <li class="menu-principal"><a href="catalogue">contactez-nous</a></li> #}
-        </ul>
-    </nav>
+        {# </ul> #}
+    {# </nav> #}
 
 
 

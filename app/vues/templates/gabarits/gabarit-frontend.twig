@@ -27,13 +27,13 @@
                 <ul class="header-connect">
                     
                     {% if oUtilConn == false %}
-                    <li class="conexion"><a href="membre"> Se connecter |</a></li>
-                    <li class="conexion"><a href="ajouterUtilisateur">| Nouveau soumissionnaire</a></li>
+                    <li class="conexion"><a href="membre"> Login |</a></li>
+                    <li class="conexion"><a href="ajouterUtilisateur">| Sign in </a></li>
                     {# (isset($_SESSION['oUtilConn']) #}
                     {% endif %}
                     {% if oUtilConn == true %}
-                        <li class="conexion"><a href="membre?entite=timbre&action=f"> Mon Profil |</a></li>
-                        <li class="conexion"><a href="membre?entite=utilisateur&action=d">| Déconnecter |</a></li>
+                        <li class="conexion"><a href="membre?entite=timbre&action=f"> My profile |</a></li>
+                        <li class="conexion"><a href="membre?entite=utilisateur&action=d">| Logout|</a></li>
                         <li class="conexion"><a href="membre?entite=timbre&action=f">| {{ oUtilConn.utilisateur_prenom }}</a></li>
                         {# <p>{{ oUtilConn.utilisateur_prenom }}</p> #}
                     {# <li class="session-name">{{ oUtilConn.utilisateur_prenom }}</li>  #}
@@ -51,7 +51,7 @@
                     <li class="conexion-droite"><a href="membre?entite=timbre&action=fo"></a><span>VENDRE</span></li>
                     {% endif %} #}
                     
-                    <li class="conexion-droite"><a href="catalogue"></a><span>JOIGNEZ-VOUS À NOTRE LISTE D'ENVOI</span></li>
+                    <li class="conexion-droite"><a href="catalogue"></a><span>In development</span></li>
                     <li class="langue">
                         <a href="catalogue">FRANCAIS</a>
                         <ul class="langue-dropdown">
@@ -98,9 +98,9 @@
             <li class="menu-principal menu-Accueil"><a href="accueil">HOME</a></li>
             <li class="menu-principal menu-Accueil"><a href="catalogue">Subaru Catalog</a></li>
             <li class="menu-principal "><a href="membre?entite=timbre&action=f">My profile</a></li>
-            <li class="menu-principal"><a href="membre?entite=timbre&action=f">All cars</a></li>
+            <li class="menu-principal"><a href="membre?entite=timbre&action=f">All my cars</a></li>
             <li class="menu-principal"><a href="membre?entite=timbre&action=fo">Add car</a></li>
-            <li class="menu-principal"><a href="catalogue">contactez-nous</a></li>
+            <li class="menu-principal"><a href="catalogue">contact us</a></li>
         </ul>
     </nav>
 

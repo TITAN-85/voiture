@@ -58,7 +58,7 @@ class MembreTimbre extends Membre {
       'vMembreTimbres',
       [
         'oUtilConn'           => self::$oUtilConn,
-        'titre'               => 'Gestion des utilisateurs',
+        'titre'               => 'My profile',
         'timbres'             => $timbres, 
         'dateCourent'         => $dateCourent, 
         
@@ -76,7 +76,7 @@ class MembreTimbre extends Membre {
       'vMembreTimbres',
       [
         'oUtilConn'           => self::$oUtilConn,
-        'titre'               => 'Gestion des utilisateurs',
+        'titre'               => 'My profile',
         'timbres'             => $timbres, 
         'dateCourent'         => $dateCourent, 
         
@@ -97,7 +97,7 @@ class MembreTimbre extends Membre {
               'timbres'             => $timbres,
               'oUtilConn'           => self::$oUtilConn,
               'dateCourent'         => $dateCourent,
-              'titre'               => 'Gestion des utilisateurs'
+              'titre'               => 'My profile'
             ),
             "gabarit-frontend");
   }

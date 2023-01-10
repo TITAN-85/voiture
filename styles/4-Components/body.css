@@ -400,11 +400,6 @@ picture {
     display: none;
 }
 
-main>section h1 {
-    /* max-width: 500px; */
-	margin-right: auto;
-	margin-left: auto;
-}
 
 
 
@@ -584,6 +579,13 @@ main .voiture01,
     margin: 0;
 }
 
+.titre-principale {
+    text-align: center !important; 
+    max-width: 1300px !important;
+	margin-right: auto !important;
+	margin-left: auto !important;
+}
+
 @media screen and (min-width: 450px ) and (max-width: 710px) {
     .g.voitures {
         grid-template-columns: repeat(8, max-content);
@@ -659,4 +661,6 @@ main .voiture01,
     .link {
         font-size: 10px;
     }
+
+
 }

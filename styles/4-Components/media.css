@@ -91,9 +91,6 @@
 		font-size: var(--font-size-large);
 	}
 
-	.conexion-droite {
-		
-	}
 	.header-haut {
 		flex-direction: column;
 	}

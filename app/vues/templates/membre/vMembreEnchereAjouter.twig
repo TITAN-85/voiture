@@ -2,10 +2,10 @@
 <script type="module" src="js/filtrer.js"></script>
 
 <section>
-  <h1>{{ post.published_at|date("m/d/Y - H:m:s", "America/Toronto")}}</h1>
+  <h1 class="titre-principale">{{ post.published_at|date("m/d/Y - H:m:s", "America/Toronto")}}</h1>
 {# post.published_at now|date("m/d/Y", "Canada/Ottawa") #}
         <section class="form-courriel-section">
-            <h2 class="form-titre-haut">Добавить Субару</h2>
+            <h2 class="form-titre-haut">Add a new car</h2>
 
             <form class="form-form" enctype="multipart/form-data" action="ajEnchere" method="post">
                 <div class="form-main">
@@ -16,7 +16,7 @@
 
                     {# nom #}
                     <div>
-                        <h3>Машина / Мотор</h3>
+                        <h3>Car / Engine</h3>
                         <label class="form-courriel" for="tNom"> 
                             <input id="tNom" class="form-courriel" type="text" name="timbre_nom" placeholder="nom" value="Subaru Outback 2.5">
                             <span class="errMsg">&nbsp;{{ erreurs.timbre_nom  }}</span>
@@ -25,7 +25,7 @@
 
                     {# prix #}
                     <div>
-                        <h3>Цена</h3>
+                        <h3>Price</h3>
                         <label class="form-courriel" for="tPrix">
                             <input id="tPrix" class="form-courriel" type="text" name="timbre_prix" placeholder="Цена">
                             <span>&nbsp;{{ erreurs.timbre_prix }}</span>
@@ -34,7 +34,7 @@
 
                     {# Пробег #}
                     <div>
-                        <h3>Пробег</h3>
+                        <h3>Mileage</h3>
                         <label class="form-courriel" for="tKm">
                             <input id="tKm" class="form-courriel" type="text" name="timbre_km" placeholder="Пробег">
                             <span>&nbsp;{{ erreurs.timbre_km }}</span>
@@ -43,7 +43,7 @@
 
                     {# Год #}
                     <div> 
-                        <h3>Год</h3>
+                        <h3>Year</h3>
                         <label class="form-courriel" for="tAnee">
 
                             <select name="timbre_anee" class="form-courriel" id="tAnee">
@@ -61,7 +61,7 @@
 
                     {# Pays d'origine #}    
                     <div>
-                        <h3>Багажник / Кондиционер</h3>
+                        <h3>Trunk / Air conditioning</h3>
                         <select class="coffre" name="timbre_pays"> 
                             {# <option value="0">Тип Багажника</option> #}
                             {% for pay in pays %}
@@ -73,7 +73,7 @@
 
                     {# Timbre Categorie #}    
                     <div>
-                        <h3>Колёса</h3>
+                        <h3>Tire type</h3>
                         <select class="pneu" name="timbre_categorie">
                             {# <option value="1">{{categorie.categorie_nom}}</option>  #}
                             {% for categorie in categories %}
@@ -85,20 +85,20 @@
 
                     {# Timbre detail | description - textarea #}    
                     <div>
-                        <h3>Тут вставляй линк из FaceBook</h3>
+                        <h3>Link</h3>
                             <textarea name="timbre_description" class="form-courriel" rows="5" cols="30" placeholder="http://......."></textarea>
                         <span>&nbsp;{{ erreurs.timbre_description }}</span>
                     </div>
 
                     {# button envoye #}  
                     <div>
-                        <h3>Фото</h3>
+                        <h3>Photo</h3>
                         <label class="photoCar" for="tFile">
                             <input id="tFile" class="form-courriel" type="file" visbility="hidden" name="userfile">
                         </label>
                     </div>
 
-                    <button class="form-sumettre">Soumettre</button>
+                    <button class="form-sumettre">Submit</button>
                 </div>
             </form>
         </section>

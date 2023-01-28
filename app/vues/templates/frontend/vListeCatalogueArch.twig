@@ -3,11 +3,11 @@
 <!-- FORM de la Catalogue -->
 <div class="catalogue">
     <div class="sidebar" data-js-list>
-        <h2>Recherche avancée</h2>
+        <h2>Advanced search</h2>
         <div class="filterCartes ">
             <form class="formSide" method="GET">
                 <div class="formGroup">
-                    <label for="statutAuction">Auction Statut</label>
+                    <label for="statutAuction">Statut</label>
                     <select class="selectForm" id="statutAuction">
                         <option selected="selected">Toute</option>
                         <option>Bientôt fermé </option>
@@ -112,10 +112,10 @@
                     title="Livraison disponible"></i>
             </div>
             <div class="cardBody">
-                <span class="">Date fin: {{timbre.enchere_date_fin}}</span>
+                <span class="">Date: {{timbre.enchere_date_fin}}</span>
             </div>
                 <div>
-                    <span class="icon-active"> Enchere fermee 
+                    <span class="icon-active"> Closed
                         <img class="icon-active" width="20" height="20" viewBox="0 0 40 40" fill="none" src="assets/svg/icons8-close.svg" alt="image timbres francais">
                     </span>
                 </div>
@@ -130,9 +130,9 @@
             <div class="card-footer">
                 <h3>{{ timbre.timbre_nom }}</h3>
                     {% if timbre.mise_prix == false %}
-                        <span>Derniere Mise: {{ timbre.timbre_prix }}.00 CAD</span>
+                        <span>Price: {{ timbre.timbre_prix }}.00 CAD</span>
                     {% else %}
-                        <span>Derniere Mise: {{ timbre.mise_prix }}.00 CAD</span>
+                        <span>Price: {{ timbre.mise_prix }}.00 CAD</span>
                     {% endif %}
             </div>
         </article>

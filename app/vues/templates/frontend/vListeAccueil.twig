@@ -20,7 +20,7 @@
         {% if timbre.enchere_date_fin > dateCourent %}
         <article class="card">
             <div class="card-header">
-                <span class="card-lot">Voiture {{timbre.timbre_id}} | 
+                <span class="card-lot">Car {{timbre.timbre_id}} | 
                     {% if timbre.mise_prix == false %}
                         {{ timbre.timbre_prix }}
                     {% else %}
@@ -42,7 +42,7 @@
             </div>
 
             <div>
-                <span class="icon-active"> Voiture Active 
+                <span class="icon-active"> Active 
                     <img class="icon-active" width="20" height="20" viewBox="0 0 40 40" fill="none" src="assets/svg/icons8-ok.svg" alt="image timbres francais">
                 </span>
             </div>
@@ -75,7 +75,7 @@
             {% else %}
                 <a class="cardBtn" href="membre">
                     <div>
-                        <span>Se connecter</span>
+                        <span>Log in</span>
                     </div> 
                 </a>
             {% endif %}

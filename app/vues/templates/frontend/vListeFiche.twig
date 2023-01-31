@@ -34,27 +34,27 @@
         </div>
         <div class="fiche-detail">
             <div class="fiche-detail-info-haut">
-                <h2 class="fiche-nom">Titre: {{timbre_nom}}</h2>
+                <h2 class="fiche-nom">Title: {{timbre_nom}}</h2>
                 <p class="fiche-lot">Lot No.<span> {{timbre_id}} </span></p>
                 <div class="fiche-description">
-                    <p> Categorie:</p>
+                    <p> Tire type:</p>
                     <h5> {{categorie_nom}}</h5>
-                    <p>Pays d'origin: </p>
+                    <p>Trunk / Air conditioning </p>
                     <h5> {{pays_nom}}</h5>
-                    <p>Timbre description: </p>
-                    <h5> {{timbre_description}}</h5>
+                    {# <p>Timbre description: </p> #}
+                    {# <h5> {{timbre_description}}</h5> #}
                 </div>
             </div>
             <div class="fiche-detail-info-bas">
                 <div class="fiche-detail-header">
-                    <p class="date_start"> Debut enchere: <span> {{enchere_date_debut}} </span></p>
-                    <p class="date_end red_txt"> Fin enchere: <span> {{enchere_date_fin}} </span></p>
+                    <p class="date_start"> Date: <span> {{enchere_date_debut}} </span></p>
+                    <p class="date_end red_txt"> End time: <span> {{enchere_date_fin}} </span></p>
                 </div>
-                <p class="product_details-price ">Mise de depare: <span> {{timbre_prix}}.00 CAD</span></p>
+                <p class="product_details-price ">Price: <span> {{timbre_prix}}.00 CAD</span></p>
                 {% if max_mise_prix == false %}
-                <p class="product_details-price ">Offre actuelle: <span> {{timbre_prix}}.00 CAD</span></p>
+                <p class="product_details-price ">Price: <span> {{timbre_prix}}.00 CAD</span></p>
                 {% else %}
-                <p class="product_details-price ">Offre actuelle: <span> {{ max_mise_prix }}.00 CAD</span></p>
+                <p class="product_details-price ">Price: <span> {{ max_mise_prix }}.00 CAD</span></p>
                 {% endif %}
                 <div class="fiche-detail-footer">
                     {% if oUtilConn == true  %}
@@ -73,7 +73,7 @@
                     {% else %}
                         <a class="cardBtn" href="membre">
                             <div>
-                                <span>Se connecter</span>
+                                <span>Log in</span>
                             </div> 
                         </a>
                     {% endif %}

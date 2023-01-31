@@ -117,13 +117,13 @@
                     title="Livraison disponible"></i>
             </div>
             <div class="cardBody">
-                <span class="">Date debut: {{timbre.enchere_date_debut}}</span>
+                <span class="">Date: {{timbre.enchere_date_debut}}</span>
             </div>
-            <div class="cardBody">
+            {# <div class="cardBody">
                 <span class="">Date fin: {{timbre.enchere_date_fin}}</span>
-            </div>
+            </div> #}
             <div>
-                <span class="icon-active"> Enchere Active 
+                <span class="icon-active">Active 
                     <img class="icon-active" width="20" height="20" viewBox="0 0 40 40" fill="none" src="assets/svg/icons8-ok.svg" alt="image timbres francais">
                 </span>
             </div>
@@ -141,19 +141,19 @@
             
             <div class="card-footer">
                 <h3>{{ timbre.timbre_nom }}</h3>
-                    {% if timbre.mise_prix == false %}
-                        <span>Prix initial: {{ timbre.timbre_prix }}.00 CAD</span>
-                    {% else %}
+                    {# {% if timbre.mise_prix == false %} #}
+                        <span>Price: {{ timbre.timbre_prix }}.00 CAD</span>
+                    {# {% else %}
                         <span>Derniere Mise: {{ timbre.mise_prix }}.00 CAD</span>
-                    {% endif %}
+                    {% endif %} #}
             {% if oUtilConn == true  %}
                 <a class="cardBtn" href="fiche?enchere_id={{ timbre.enchere_id }}" aria-label="Offrir{{ timbre.timbre_prix }}">
-                    <div><span> Mise / Detail </span></div>
+                    <div><span> Detail </span></div>
                 </a>
             {% else %}
                 <a class="cardBtn" href="membre">
                     <div>
-                        <span>Se connecter</span>
+                        <span>Log in</span>
                     </div> 
                 </a>
             {% endif %}

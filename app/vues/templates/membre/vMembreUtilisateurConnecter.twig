@@ -6,21 +6,21 @@
           <div class="header-haut">
             <div>
               <ul class="conexion-droite">
-                <li class="conexion-droite"><a href="accueil">Returner a Accueil</a></li>
+                <li class="conexion-droite"><a href="accueil">Home</a></li>
               </ul>
             </div>
         </div>
 <section> 
-  <h1>{{ titre|upper }}</h1>
+  <h1>Sign in</h1>
   
     <form method="POST" action="membre">
 
         <br><span>&nbsp;{{ messageErreurConnexion }}</span>
 		<div class="form-main">
-        <label>Courriel</label>
+        <label>Email</label>
         <input name="utilisateur_courriel" value="">
 		</div>
-        <label>Mot de passe</label>
+        <label>Password</label>
 
         <input type="password" name="utilisateur_mdp" value="">
 

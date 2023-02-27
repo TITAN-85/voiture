@@ -25,7 +25,6 @@ class Routeur {
     ["ajouterUtilisateur",  "Frontend",              "ajouterUtilisateur"],
     ["creeUtilisateur",     "MembreUtilisateur",     "ajouterUtilisateur"],
     ["ajEnchere",           "EnchereTimbre",             "ajouterEnchere"],
-    // ["",                    "Membre",                       "gererEntite"],
   ];
 
   protected $oRequetesSQL; // objet RequetesSQL utilisé par tous les contrôleurs

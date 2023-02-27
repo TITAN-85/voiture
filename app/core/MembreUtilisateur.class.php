@@ -41,7 +41,6 @@ class MembreUtilisateur extends Membre {
         $messageErreurConnexion = "Courriel ou mot de passe incorrect.";
       }
     }
-    $dateCourent = date('Y-m-d');
     (new Vue)->generer(
       'vMembreUtilisateurConnecter',
       [

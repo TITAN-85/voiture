@@ -14,7 +14,6 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-  {# <link rel="stylesheet" type="text/css" href="css/frontend.css?v=1.2"> #}
   <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap" rel="stylesheet">
   
 </head>
@@ -29,28 +28,17 @@
                     {% if oUtilConn == false %}
                     <li class="conexion"><a href="membre"> Log in |</a></li>
                     <li class="conexion"><a href="ajouterUtilisateur">| Sign up </a></li>
-                    {# (isset($_SESSION['oUtilConn']) #}
                     {% endif %}
                     {% if oUtilConn == true %}
                         <li class="conexion"><a href="membre?entite=timbre&action=f"> My profile |</a></li>
                         <li class="conexion"><a href="membre?entite=utilisateur&action=d">| Logout|</a></li>
                         <li class="conexion"><a href="membre?entite=timbre&action=f">| {{ oUtilConn.utilisateur_prenom }}</a></li>
-                        {# <p>{{ oUtilConn.utilisateur_prenom }}</p> #}
-                    {# <li class="session-name">{{ oUtilConn.utilisateur_prenom }}</li>  #}
+
                     {% endif %}
                 </ul>
             </div>
             <div>
                 <ul class="header-connect">
-                    {# {% if oUtilConn == false %}
-                    <li class="conexion"><a href="admin">Admin button |</a></li>
-                    <li class="conexion-droite"><a href="catalogue"></a><span>VENDRE</span></li>
-                    {% endif %}     #}
-                    
-                    {# {% if oUtilConn == true %}
-                    <li class="conexion-droite"><a href="membre?entite=timbre&action=fo"></a><span>VENDRE</span></li>
-                    {% endif %} #}
-                    
                     <li class="conexion-droite"><a href="catalogue"></a><span>In development</span></li>
                     <li class="langue">
                         <a href="catalogue">FRANCAIS</a>
@@ -85,10 +73,8 @@
 
   </header>
 
-
   <!-- checkbox BTN MENU FERMER -->
   <input type="checkbox">
-
 
 <!-- NAV -->
     <nav class="menu">

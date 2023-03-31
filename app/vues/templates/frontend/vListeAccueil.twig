@@ -97,14 +97,14 @@
 <section>
     <div class="g voitures card-contenu">
         <div class="t">Photo</div>
-        <div class="t hd">Name</div>
-        <div class="t hd">Date added</div>
+        <div class="t hd fd">Name</div>
+        <div class="t hd fd">Date added</div>
         <div class="t">Year</div>
-        <div class="t">accessoires</div>    
+        <div class="t fd hd">accessoires</div>    
         <div class="t">wheels</div>    
         <div class="t">Mileage</div>
         <div class="t">Price</div>    
-        <div class="t hd">Price+10%</div>
+        <div class="t hd fd">Price+10%</div>
         <div class="t hd">Price+15%</div>
         <div class="t">Value</div>
         <div class="t">Link</div>
@@ -124,14 +124,14 @@
                     <picture><img src="assets/jpeg/timbres/{{ timbre.image_url }}" alt="image timbres francais">
                     </a>
         
-                    <div class="c dr hd">{{ timbre.timbre_nom }}</div>
-                    <div class="c dr hd">{{ timbre.enchere_date_debut }}</div>
+                    <div class="c fd dr hd">{{ timbre.timbre_nom }}</div>
+                    <div class="c fd dr hd">{{ timbre.enchere_date_debut }}</div>
                     <div class="c   ">{{ timbre.timbre_anee }}</div>
-                    <div class="c   ">{{ timbre.pays_nom }}</div>
-                    <div class="c   ">{{ timbre.categorie_nom }}</div>
+                    <div class="c fd  ">{{ timbre.pays_nom }}</div>
+                    <div class="c   hd">{{ timbre.categorie_nom }}</div>
                     <div class="c   b">{{ timbre.timbre_km }}</div>
                     <div class="c   r">{{ timbre.timbre_prix }}</div>
-                    <div class="c   rr hd">{{ (timbre.timbre_prix * 1.1)|round }}</div>
+                    <div class="c  fd rr hd">{{ (timbre.timbre_prix * 1.1)|round }}</div>
                     <div class="c   rr hd">{{ (timbre.timbre_prix * 1.15)|round }}</div>
                     <div class="c   ">{{ timbre.timbre_rate }}</div>
                     <div class="c   "><a class="cardBtn link" href="{{ timbre.timbre_description }}" target="_blank" ><div>Open Link</div></a></div>
@@ -146,15 +146,15 @@
 <div class="voiture02"> Cars from 19.000 to 20.000$ </div>
 <section>
     <div class="g voitures">
-        <div class="t">Photo</div>
-        <div class="t hd">Name</div>
-        <div class="t hd">Date added</div>
+        <div class="t ">Photo</div>
+        <div class="t hd fd">Name</div>
+        <div class="t hd fd">Date added</div>
         <div class="t">Year</div>
-        <div class="t">accessoires</div>    
+        <div class="t fd hd">accessoires</div>    
         <div class="t">wheels</div>    
         <div class="t">Mileage</div>
         <div class="t">Price</div>    
-        <div class="t hd">Price+10%</div>
+        <div class="t hd fd">Price+10%</div>
         <div class="t hd">Price+15%</div>
         <div class="t">Value</div>
         <div class="t">Link</div>
@@ -171,14 +171,14 @@
                     <picture><img src="assets/jpeg/timbres/{{ timbre.image_url }}" alt="image timbres francais">
                     </a>
 
-                    <div class="c dr hd">{{ timbre.timbre_nom }}</div>
-                    <div class="c dr hd">{{ timbre.enchere_date_debut }}</div>
+                    <div class="c dr hd fd">{{ timbre.timbre_nom }}</div>
+                    <div class="c dr hd fd">{{ timbre.enchere_date_debut }}</div>
                     <div class="c   ">{{ timbre.timbre_anee }}</div>
-                    <div class="c   ">{{ timbre.pays_nom }}</div>
-                    <div class="c   ">{{ timbre.categorie_nom }}</div>
+                    <div class="c fd  ">{{ timbre.pays_nom }}</div>
+                    <div class="c  hd ">{{ timbre.categorie_nom }}</div>
                     <div class="c   b">{{ timbre.timbre_km }}</div>
                     <div class="c   r">{{ timbre.timbre_prix }}</div>
-                    <div class="c   rr hd">{{ (timbre.timbre_prix * 1.1)|round }}</div>
+                    <div class="c  fd rr hd">{{ (timbre.timbre_prix * 1.1)|round }}</div>
                     <div class="c   rr hd">{{ (timbre.timbre_prix * 1.15)|round }}</div>
                     <div class="c   ">{{ timbre.timbre_rate }}</div>
                     <div class="c   "><a class="cardBtn link" href="{{ timbre.timbre_description }}" target="_blank" ><div>Open Link</div></a></div>
@@ -192,17 +192,17 @@
 
 
 <div class="voiture03"> Cars from 20.000$ </div>
-<section>
+<section class="tablesCars">
     <div class="g voitures">
         <div class="t">Photo</div>
-        <div class="t hd">Name</div>
-        <div class="t hd">Date added</div>
+        <div class="t hd fd">Name</div>
+        <div class="t hd fd">Date added</div>
         <div class="t">Year</div>
-        <div class="t">accessoires</div>    
+        <div class="t hd fd">accessoires</div>    
         <div class="t">wheels</div>    
         <div class="t">Mileage</div>
         <div class="t">Price</div>    
-        <div class="t hd">Price+10%</div>
+        <div class="t fd hd">Price+10%</div>
         <div class="t hd">Price+15%</div>
         <div class="t">Value</div>
         <div class="t">Link</div>
@@ -217,14 +217,14 @@
                     <a href="membre" aria-label="foto timbre">
                     {% endif %}
                     <picture><img src="assets/jpeg/timbres/{{ timbre.image_url }}" alt="image timbres francais"></a>
-                    <div class="c dr hd">{{ timbre.timbre_nom }}</div>
-                    <div class="c dr hd">{{ timbre.enchere_date_debut }}</div>
+                    <div class="c dr hd fd">{{ timbre.timbre_nom }}</div>
+                    <div class="c dr hd fd">{{ timbre.enchere_date_debut }}</div>
                     <div class="c   ">{{ timbre.timbre_anee }}</div>
-                    <div class="c   ">{{ timbre.pays_nom }}</div>
-                    <div class="c   ">{{ timbre.categorie_nom }}</div>
+                    <div class="c  fd ">{{ timbre.pays_nom }}</div>
+                    <div class="c hd ">{{ timbre.categorie_nom }}</div>
                     <div class="c   b">{{ timbre.timbre_km }}</div>
                     <div class="c   r">{{ timbre.timbre_prix }}</div>
-                    <div class="c   rr hd">{{ (timbre.timbre_prix * 1.1)|round }}</div>
+                    <div class="c  fd rr hd">{{ (timbre.timbre_prix * 1.1)|round }}</div>
                     <div class="c   rr hd">{{ (timbre.timbre_prix * 1.15)|round }}</div>
                     <div class="c   ">{{ timbre.timbre_rate }}</div>
                     <div class="c   "><a class="cardBtn link" href="{{ timbre.timbre_description }}" target="_blank" ><div>Open Link</div></a></div>

@@ -12,21 +12,14 @@ footer div:first-child{
   /* margin: 20px; */
 }
 
-.politique a, span {
+.politique span,
+.politique a
+{
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
   margin: 0;
   padding: 2px;
-  /* color: var(--color-palette-second-var); */
-  color: rgb(0, 0, 0);
+  color:  rgb(255, 255, 255) !important; 
 }
-/* FIXME: */
-
-/* main .span  {
-	color: white;
-}
-main > .errMsg {
-    color: rgb(255, 255, 255);
-} */
 
 footer {
   background-color: var(--color-primary);

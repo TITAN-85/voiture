@@ -2,19 +2,19 @@ DROP DATABASE voiture;
 CREATE database voiture;
 
 
-CREATE TABLE profil (
+CREATE TABLE dbs9660527.profil (
 profil_id INT NOT NULL auto_increment primary key, 
 profil_nom VARCHAR(45)
 );
 
 
-CREATE TABLE pays(
+CREATE TABLE dbs9660527.pays(
 pays_id INT NOT NULL auto_increment primary key, 
 pays_nom VARCHAR(45)
 );
 
 
-CREATE TABLE utilisateur (
+CREATE TABLE dbs9660527.utilisateur (
 utilisateur_id INT NOT NULL auto_increment primary key,
 utilisateur_nom VARCHAR(45),
 utilisateur_prenom VARCHAR(45),
@@ -25,7 +25,7 @@ constraint utilisateur_profil_id_fk foreign key (utilisateur_profil_id) referenc
 ) ENGINE=InnoDB  DEFAULT CHARSET=UTF8;
 
 
-CREATE TABLE enchere (
+CREATE TABLE dbs9660527.enchere (
 enchere_id INT NOT NULL auto_increment primary key,
 enchere_date_debut DATE,
 enchere_date_fin DATE,
@@ -34,7 +34,7 @@ constraint enchere_utilisateur_id_fk foreign key (enchere_utilisateur_id) refere
 );
 
 
-CREATE TABLE mise(
+CREATE TABLE dbs9660527.mise(
 mise_id INT NOT NULL auto_increment primary key,
 mise_prix DOUBLE,
 mise_date DATE NOT NULL,
@@ -44,13 +44,13 @@ mise_utilisateur_id INT not null,
 constraint mise_utilisateur_id_fk foreign key (mise_utilisateur_id) references utilisateur (utilisateur_id)
 );
 
-CREATE TABLE categorie(
+CREATE TABLE dbs9660527.categorie(
 categorie_id INT NOT NULL auto_increment primary key,
 categorie_nom VARCHAR(45) NOT NULL
 );
 
 
-CREATE TABLE timbre(
+CREATE TABLE dbs9660527.timbre(
 timbre_id INT NOT NULL auto_increment primary key, 
 timbre_nom VARCHAR(45) NOT NULL, 
 timbre_description VARCHAR(255), 
@@ -68,7 +68,7 @@ timbre_utilisateur_id INT NOT NULL,
 constraint timbre_utilisateur_id_fk foreign key (timbre_utilisateur_id) references utilisateur (utilisateur_id)
 );
 
-CREATE TABLE image (
+CREATE TABLE dbs9660527.image (
 image_id INT NOT NULL auto_increment primary key,
 image_url VARCHAR(255),
 image_timbre_id INT not null,
@@ -76,11 +76,11 @@ constraint image_timbre_id_fk foreign key (image_timbre_id) references timbre (t
 );
 
 -- ================================= INSERT profil ==========================
-INSERT INTO profil VALUES (null, "administrateur");
-INSERT INTO profil VALUES (null, "membre");
+INSERT INTO dbs9660527.profil VALUES (null, "administrateur");
+INSERT INTO dbs9660527.profil VALUES (null, "membre");
 
 -- ================================= INSERT utilisateur ==========================
-INSERT INTO utilisateur VALUES
+INSERT INTO dbs9660527.utilisateur VALUES
 (null, "candutatiana@gmail.com",   "Candu Tatiana", "candutatiana@gmail.com",  SHA2("1234", 512), "1"),
 (null, "Jouhannet", "Charles", "cjouhannet@cmaisonneuve.qc.ca", SHA2("a1b2c3d4e5", 512), "1"),
 (null, "Tremblay",  "Jean",    "jean.tremblay@site1.ca",        SHA2("f1g2h3i4j5", 512), "2"),
@@ -91,10 +91,10 @@ INSERT INTO utilisateur VALUES
 
 
 -- ================================= INSERT pays ==========================
-insert into pays value (null, "basic");
-insert into pays value (null, "auto-trunk");
-insert into pays value (null, "auto-air cond.");
-insert into pays value (null, "auto-air.c.+ trunk");
+insert into dbs9660527.pays value (null, "basic");
+insert into dbs9660527.pays value (null, "auto-trunk");
+insert into dbs9660527.pays value (null, "auto-air cond.");
+insert into dbs9660527.pays value (null, "auto-air.c.+ trunk");
 
 -- update voiture.pays set pays_nom = "базовая" where pays_id = 1;
 -- update voiture.pays set pays_nom = "Багажник" where pays_id = 2;
@@ -103,30 +103,30 @@ insert into pays value (null, "auto-air.c.+ trunk");
 
 -- select * from voiture.pays
 -- ================================= INSERT categorie ==========================
-insert into categorie value (null, "Rims");
-insert into categorie value (null, "Mags");
+insert into dbs9660527.categorie value (null, "Rims");
+insert into dbs9660527.categorie value (null, "Mags");
 
 -- update voiture.categorie set categorie_nom = "Железные" where categorie_id = 1;
 -- update voiture.categorie set categorie_nom = "Алюминевые" where categorie_id = 2;
 -- select * from voiture.categorie
 
 -- ================================= INSERT enchere ==========================
-insert into enchere value (null, "2022-12-28", "2023-12-28", "1");
-insert into enchere value (null, "2022-12-28", "2023-12-28", "1");
-insert into enchere value (null, "2022-12-28", "2023-12-28", "1");
-insert into enchere value (null, "2022-12-28", "2023-12-28", "1");
+insert into dbs9660527.enchere value (null, "2022-12-28", "2023-12-28", "1");
+insert into dbs9660527.enchere value (null, "2022-12-28", "2023-12-28", "1");
+insert into dbs9660527.enchere value (null, "2022-12-28", "2023-12-28", "1");
+insert into dbs9660527.enchere value (null, "2022-12-28", "2023-12-28", "1");
 
 -- ================================= INSERT timbre ==========================
-insert into timbre value (null, "2015 Subaru outback", "google.com", "16995", "135000", "2015", "85", "2", "1", "1", "1");
-insert into timbre value (null, "2016 Subaru outback", "google.com", "17995", "165000", "2016", "110", "3", "2", "2", "1");
-insert into timbre value (null, "2017 Subaru outback", "google.com", "18995", "115000", "2017", "135", "2", "2", "3", "1");
-insert into timbre value (null, "2018 Subaru outback", "google.com", "19995", "185000", "2018", "155", "1", "1", "4", "1");
+insert into dbs9660527.timbre value (null, "2015 Subaru outback", "google.com", "16995", "135000", "2015", "85", "2", "1", "1", "1");
+insert into dbs9660527.timbre value (null, "2016 Subaru outback", "google.com", "17995", "165000", "2016", "110", "3", "2", "2", "1");
+insert into dbs9660527.timbre value (null, "2017 Subaru outback", "google.com", "18995", "115000", "2017", "135", "2", "2", "3", "1");
+insert into dbs9660527.timbre value (null, "2018 Subaru outback", "google.com", "19995", "185000", "2018", "155", "1", "1", "4", "1");
 
--- update timbr set timbre_enchere_id = 4 where timbre_id = 5;
+-- update dbs9660527.timbr set timbre_enchere_id = 4 where timbre_id = 5;
 
 
 -- ================================= INSERT images ==========================
-insert into image value (null, "0111.jpg", "1");
-insert into image value (null, "0222.jpg", "1");
-insert into image value (null, "0333.jpg", "1");
-insert into image value (null, "0444.jpg", "1");
+insert into dbs9660527.image value (null, "0111.jpg", "1");
+insert into dbs9660527.image value (null, "0222.jpg", "1");
+insert into dbs9660527.image value (null, "0333.jpg", "1");
+insert into dbs9660527.image value (null, "0444.jpg", "1");

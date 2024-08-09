@@ -13,8 +13,6 @@
 .menu .menu-list {
 	display: flex;
 	justify-content: space-between;
-	/* justify-content: center; */
-	justify-items: center;
 	padding: 13px;
 	gap: 20px;
 	max-width: 1300px;
@@ -99,11 +97,4 @@ nav li:hover .menu-dropdown {
 	justify-content: space-between;
 	padding: 1px 10px 1px 10px;
 	
-}
-@media screen and (max-width: 1150px) {
-
-	.menu-principal a {
-		margin: 0;
-		padding: 0;
-	}
 }

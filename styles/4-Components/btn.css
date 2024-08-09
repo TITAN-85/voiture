@@ -93,10 +93,10 @@ footer>div>section>a {
     appearance: none;
     -webkit-appearance: none;
     background-color: var(--color-primary-second-variation);
-    padding: 15px;
+    padding: 20px;
     border-radius: 30px;
     position: absolute;
-    top: 2px;
+    top: 150px;
     right: 10px;
     z-index: 2;
   }
@@ -110,7 +110,7 @@ footer>div>section>a {
   }
   
   input[type="checkbox"]:checked::before {
-    content: "CLOSE"
+    content: "Fermer"
   }
   
   input[type="checkbox"]:not(:checked)~nav {
@@ -120,9 +120,9 @@ footer>div>section>a {
 
   @media screen and (max-width: 710px) {
     input[type=checkbox] {
-      padding: 15px;
+      padding: 20px;
       border-radius: 30px;
-      top: 2px;
+      top: 5px;
       right: 5px;
     }
   }

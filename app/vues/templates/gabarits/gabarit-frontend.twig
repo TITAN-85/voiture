@@ -47,6 +47,7 @@
                             <li><a href="catalogue"><span>French</span></a></li>
                             <li><a href="catalogue"><span>Romanian</span></a></li>
                             <li><a href="catalogue"><span>Chinoise</span></a></li>
+                            <li><a href="catalogue"><span>Russian</span></a></li>
                         </ul>
                     </li>
                 </ul>
@@ -62,6 +63,8 @@
                 <form class="input-bar" method="POST" action="rechercher" >
                     <div class="input-bar">
                         <input class="input-input" type="text" value="" name="enchere_recherchee" placeholder="Find a car">
+                        {# <input class="input-input" type="text" name="trouve-postal" placeholder="Code Postale"> #}
+                        {# <input class="input-input" type="text" name="trouve-distance" placeholder="50 Km"> #}
                         <input class="input-text" type="submit" value="Find a car">
                     </div>
                 </form>
@@ -77,12 +80,12 @@
     <nav class="menu">
         <!-- menu principal -->
         <ul class="menu-list">
-            <li class="menu-principal menu-Accueil flexMenuMid"><a href="accueil">HOME</a></li>
-            <li class="menu-principal menu-Accueil flexMenuMid"><a href="catalogue">Cars catalog</a></li>
-            <li class="menu-principal flexMenuMid"><a href="membre?entite=timbre&action=f">My profile</a></li>
-            <li class="menu-principal flexMenuMid"><a href="membre?entite=timbre&action=f">All my cars</a></li>
-            <li class="menu-principal flexMenuMid"><a href="membre?entite=timbre&action=fo">Add car</a></li>
-            {# <li class="menu-principal"><a href="catalogue">contact us</a></li> #}
+            <li class="menu-principal menu-Accueil"><a href="accueil">HOME</a></li>
+            <li class="menu-principal menu-Accueil"><a href="catalogue">Car catalog</a></li>
+            <li class="menu-principal "><a href="membre?entite=timbre&action=f">My profile</a></li>
+            <li class="menu-principal"><a href="membre?entite=timbre&action=f">All my cars</a></li>
+            <li class="menu-principal"><a href="membre?entite=timbre&action=fo">Add car</a></li>
+            <li class="menu-principal"><a href="catalogue">contact us</a></li>
         </ul>
     </nav>
 
@@ -91,6 +94,7 @@
   {{ include(templateMain) }}
 
   </main>
+
 
 
   <!-- FOOTER ================================================-->
@@ -111,6 +115,7 @@
                     <li><a href="catalogue.html">Devenir membre</a></li>
                 </ul>
             </section>
+
 
             <section class="input-footer">
                 <h2>Translatin fr-eng In progress</h2>
